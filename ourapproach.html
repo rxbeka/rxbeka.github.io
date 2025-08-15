@@ -212,6 +212,38 @@
       line-height: 1;
     }
 
+    /* footer */
+    footer {
+      background: var(--accent);
+      padding: 3rem 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+    }
+
+    footer p {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    footer .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 3rem;
+      text-align: left;
+    }
+
+    footer .columns>div {
+      display: flex;
+      /* make each column a flex container */
+      flex-direction: column;
+      /* stack links/text */
+      justify-content: center;
+      /* vertical center within the column */
+    }
     /* media */
     img.responsive {
       width: 100%;
@@ -269,119 +301,73 @@
   <section class="hero">
     <div class="wrapper inner">
       <h1>Depression starts in the brain, that's where you should treat it. </h1>
-      <a class="btn" href="#approach">Learn More</a>
-    </div>
-  </section>
-
-  <!-- INTRO -->
-  <section>
-    <div id="approach" style="text-align: center; max-width: 70%; align-self: center">
-      <h2>Our approach</h2>
-      <h3>At Westside NeuroTherapeutics, we don't just treat symptoms, we treat individuals. Our approach to
-        Transcranial Magnetic Stimulation (TMS) therapy goes beyond the conventional. We understand that each brain is
-        as unique as the person it belongs to, which is why we personalize every aspect of your treatment.
-        Personalization at Its Core: From your first consultation, we're committed to understanding your unique
-        journey with depression. Our psychiatrists perform a thorough evaluation to craft a treatment plan that is as
-        individual as you are.</h3>
-      <div style="text-align: left;" class="wrapper center">
-        Precision Targeted Treatment: Utilizing cutting-edge technology, we ensure the magnetic pulses of TMS therapy
-        are precisely delivered. This precision means we can directly target the areas of your brain that need
-        rejuvenation, offering you the best possible outcomes.
-        <br>
-        Committed to Comfort: We believe in making your path to recovery as comfortable and stress-free as possible.
-        Our treatment sessions are designed to be a peaceful time for healing and with no downtime, you can continue
-        with your day right after.
-        <br>
-        Transparent and Supportive: From navigating insurance coverage to understanding the treatment process, we're
-        with you every step of the way. We ensure our therapy is accessible, understandable, and supported by the
-        latest research.
-        <br>
-        Your Partner in Healing: Our goal is not only to provide you with the most effective treatment but also to
-        empower you to reclaim your life from depression. With Westside NeuroTherapeutics, you're not just receiving
-        treatment, you're gaining a partner dedicated to your well-being.
-        <br>
-        Take the first Step: Ready to explore a life beyond depression? Book your free consultation today and discover
-        the personalized and compassionate care at Westside NeuroTherapeutics.
-      </div>
     </div>
   </section>
 
   <!-- OUR APPROACH -->
-  <section id="approach" class="alt">
-    <div class="wrapper center">
-      <h2>Our Approach</h2>
-      <p class="sub">Simple, personal, results-driven.</p>
-    </div>
-
-    <div class="wrapper three-col steps">
-      <div class="card">
-        <div class="kicker">Step 01</div>
-        <div class="num">01</div>
-        <h3>Listen &amp; Evaluate</h3>
-        <p>We start with a focused, judgment-free conversation and evidence-based screening. If TMS fits, we verify
-          insurance and map your baseline.</p>
+  <section style="display: flex; align-items: center; justify-content: center;">
+    <div style="text-align: center; max-width: 60%; align-self: center">
+      <h2>Our approach</h2>
+      <h3>
+        At Westside NeuroTherapeutics, we don't just treat symptoms, we treat individuals. Our approach to
+        Transcranial Magnetic Stimulation (TMS) therapy goes beyond the conventional. We understand that each brain is
+        as unique as the person it belongs to, which is why we personalize every aspect of your treatment.
+        </h3>
+      <div style="text-align: left; font-size: 18px;">
+        <strong>Personalization at Its Core:</strong>&nbsp;From your first consultation, we're committed to understanding your unique
+        journey with depression. Our psychiatrists perform a thorough evaluation to craft a treatment plan that is as
+        individual as you are.
+        <br>
+        <br>
+        <strong>Targeted Treatment:</strong>&nbsp;Utilizing cutting-edge technology, we ensure the magnetic pulses of TMS therapy
+        are precisely delivered. This precision means we can directly target the areas of your brain that need
+        rejuvenation, offering you the best possible outcomes.
+        <br>
+        <br>
+        <strong>Committed to Comfort:</strong>&nbsp;We believe in making your path to recovery as comfortable and stress-free as possible.
+        Our treatment sessions are designed to be a peaceful time for healing and with no downtime, you can continue
+        with your day right after.
+        <br>
+        <br>
+        <strong>Transparent and Supportive:</strong>&nbsp;From navigating insurance coverage to understanding the treatment process, we're
+        with you every step of the way. We ensure our therapy is accessible, understandable, and supported by the
+        latest research.
+        <br>
+        <br>
+        <strong>Your Partner in Healing:</strong>&nbsp; Our goal is not only to provide you with the most effective treatment but also to
+        empower you to reclaim your life from depression. With Westside NeuroTherapeutics, you're not just receiving
+        treatment, you're gaining a partner dedicated to your well-being.
+        <br>
+        <br>
+        <strong>Take the first Step:</strong>&nbsp; Ready to explore a life beyond depression? Book your free consultation today and discover
+        the personalized and compassionate care at Westside NeuroTherapeutics.
       </div>
-      <div class="card">
-        <div class="kicker">Step 02</div>
-        <div class="num">02</div>
-        <h3>Tailored TMS Plan</h3>
-        <p>Your protocol is customized to your clinical picture—depression, OCD, or smoking cessation—with dosing that
-          adapts to your response.</p>
-      </div>
-      <div class="card">
-        <div class="kicker">Step 03</div>
-        <div class="num">03</div>
-        <h3>Track, Adjust, Support</h3>
-        <p>We measure results weekly, fine-tune settings, and coordinate with your therapist or prescriber. You’re never
-          on your own.</p>
-      </div>
-    </div>
-
-    <div class="wrapper center" style="margin-top:18px;">
-      <a class="btn" href="https://calendly.com/jmay-l9i4/30min">Start Your Consult</a>
     </div>
   </section>
-
-  <!-- LEARN MORE -->
-  <section>
-    <div class="wrapper center">
-      <h2>Learn More About TMS</h2>
-      <p class="sub" style="max-width:820px;margin:8px auto 22px;">
-        TMS uses gentle magnetic pulses to re-activate mood-regulating networks in the brain—without anesthesia or
-        medication.
-      </p>
-      <a class="btn" href="tms.html#how-it-works">How TMS Works</a>
-    </div>
-  </section>
-
-  <!-- INSURANCE + CONTACT -->
-  <section class="alt">
-    <div class="wrapper grid two-col">
+    <!-- FOOTER -->
+  <footer>
+    <div class="wrapper columns">
       <div>
-        <h3>We’re covered by most major plans.</h3>
-        <p class="sub">Aetna, Anthem Blue Cross, Cigna, Health Net / MHN, Optum, UnitedHealthcare, and more.</p>
-        <p><strong>Call, Email or Text</strong><br />
-          <a href="tel:13239680312">323-968-0312</a><br />
-        </p>
-        <div style="display:flex;align-items:center;gap:.5rem;">
-          <img src="src/Email_Logo.png" alt="" style="width:22px;height:auto;" />
-          <a href="mailto:rfodor@westsideneuro.com">rfodor@westsideneuro.com</a>
-        </div>
+        <img src="src\Full_Logo_Transparent_Background2.png"
+          style="width: 100%; border-radius: 8px; background: var(--accent)" />
       </div>
       <div>
-        <img class="responsive" alt="Insurance logos" src="src/insurance Providers.png" />
+        <p><strong>Stay in touch - it's good for your head!</strong></p>
+        <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
+      </div>
+      <div>
+        <a href="about.html">About</a><br />
+        <a href="services.html">Services</a><br />
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <a href="ourapproach.html">Our Approach</a><br />
+        <a href="blog.html">Blog</a><br />
+        <a href="contact.html">Get Started</a><br />
+        <a href="/privacy-policy">Privacy Policy</a>
       </div>
     </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="center">
-    <div class="wrapper">
-      <h2>Get Started With TMS Today!</h2>
-      <a class="btn" href="https://calendly.com/jmay-l9i4/30min">Book a Consultation</a>
-    </div>
-  </section>
-
+  </footer>
 </body>
 
 </html>
