@@ -1,184 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Westside NeuroTherapeutics</title>
-    <meta
-      name="description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <link rel="canonical" href="https://www.westsideneuro.com" />
-    <link
-      rel="icon"
-      href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w"
-    />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.westsideneuro.com" />
-    <meta property="og:title" content="Westside NeuroTherapeutics" />
-    <meta
-      property="og:description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <meta
-      property="og:image"
-      content="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=750w"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TMS | Westside NeuroTherapeutics</title>
+  <meta name="description"
+    content="Learn how Transcranial Magnetic Stimulation (TMS) works and whether it's right for you." />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css"
-    />
-    <style>
-      :root {
-        --accent: #002c5a;
-      }
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-      body {
-        font-family: "Pontano Sans", sans-serif;
-        line-height: 1.6;
-        color: #222;
-        margin: 0;
-      }
+  <!-- Base site styles you already use (optional) -->
+  <link rel="stylesheet" href="site.css">
 
-      header {
-        position: sticky;
-        top: 0;
-        background: var(--accent);
-        color: #fff;
-        z-index: 1000;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
-      }
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="tms.css">
+  <style>
+    /* Tiny layout helpers that match your base */
+    :root {
+      --accent: #002c5a;
+    }
 
-      .wrapper {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 0vw;
-      }
+    body {
+      font-family: "Pontano Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #111;
+      margin: 0;
+      line-height: 1.6;
+    }
 
+    .wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 0;
+    }
+
+        header {
+      position: sticky;
+      top: 0;
+      background: var(--accent);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    }
+
+    .wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 0vw;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 1.2rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav li {
+      align-content: center;
+    }
+
+        footer {
+      background: var(--accent);
+      padding: 3rem 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+    }
+
+    footer p {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    footer .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 3rem;
+      text-align: left;
+    }
+
+    footer .columns>div {
+      display: flex;
+      /* make each column a flex container */
+      flex-direction: column;
+      /* stack links/text */
+      justify-content: center;
+      /* vertical center within the column */
+    }
+
+    @media (max-width:640px) {
       nav ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 1.2rem 0;
-      }
-
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      nav li {
-        align-content: center;
-      }
-
-      .cta {
-        margin-left: auto;
-      }
-
-      section {
-        padding: 6rem 0;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0 0 1rem;
-      }
-
-      footer {
-        background: var(--accent);
-        padding: 3rem 0;
-      }
-
-      footer a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.3rem;
-      }
-
-      footer p {
-        color: #fff;
-        font-size: 1.5rem;
-      }
-
-      footer .columns {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 3rem;
-        text-align: left;
-      }
-
-      footer .columns > div {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
       }
 
-      @media (max-width: 640px) {
-        nav ul {
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        .cta {
-          margin: 1rem 0 0;
-        }
+      nav .push {
+        margin-left: 0;
       }
-    </style>
-  </head>
+    }
 
-  <body>
-    <header>
-      <div class="wrapper" style="display: flex; align-items: center; flex-wrap: wrap; flex-direction: column; justify-content: center;">
-        <nav class="wrapper">
-          <ul>
-            <a href="/" style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ourapproach.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="tms.html">TMS</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    /* ===== TMS v2 (matches provided screenshots) ===== */
+    .tms2 {
+      padding: 3rem 0 4rem;
+    }
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="wrapper columns">
-        <div>
-          <img src="src\Full_Logo_Transparent_Background2.png" style="width: 100%; border-radius: 8px; background: var(--accent)" />
+    .tms2__container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      color: #111;
+    }
+
+    .tms2__row {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 2.75rem;
+    }
+
+    .tms2__row--mid {
+      gap: 2.25rem;
+    }
+
+    .tms2__col--text {
+      min-width: 0;
+    }
+
+    .tms2__h1 {
+      font-size: clamp(1.9rem, 3.4vw, 2.4rem);
+      line-height: 1.25;
+      font-weight: 700;
+      margin: 0 0 1.25rem;
+    }
+
+    .tms2__lead {
+      font-size: 1rem;
+      line-height: 1.85;
+      margin: 0 0 1.25rem;
+    }
+
+    .tms2__img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #e6e7ea;
+    }
+
+    /* Accordion (details/summary) */
+    .tms2__accordion details {
+      border-bottom: 1px solid #dcdfe5;
+    }
+
+    .tms2__accordion details:first-child {
+      border-top: 1px solid #dcdfe5;
+    }
+
+    .tms2__accordion summary {
+      list-style: none;
+      cursor: pointer;
+      padding: .9rem 0;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .tms2__accordion summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .tms2__accordion details:not([open]) summary {
+      border-bottom: 1px solid #dcdfe5;
+    }
+
+    /* + / – icons like the screenshot */
+    .tms2__accordion summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: .9rem;
+      font-size: 1.1rem;
+      line-height: 1;
+      color: #111;
+    }
+
+    .tms2__accordion details[open] summary::after {
+      content: "–";
+    }
+
+    .tms2__acc-body {
+      padding: 0 0 1rem;
+      color: #333;
+      line-height: 1.85;
+      font-size: .98rem;
+    }
+
+    /* Dark band CTA */
+    .tms2__band {
+      background: #1f1f1f;
+      color: #fff;
+      margin: 2.25rem 0 1.25rem;
+      padding: 2rem 1.25rem;
+      border: 1px solid #121212;
+    }
+
+    .tms2__band p {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .tms2__band a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Centered button */
+    .tms2__cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+
+    .tms2__cta-btn {
+      display: inline-block;
+      background: #243552;
+      color: #fff;
+      padding: .9rem 1.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(0, 0, 0, .25);
+    }
+
+    /* Responsive reorder like the reference */
+    @media (max-width:980px) {
+      .tms2__row {
+        grid-template-columns: 1fr;
+      }
+
+      .tms2__row--top .tms2__col--media {
+        order: 2;
+      }
+
+      .tms2__row--top .tms2__col--text {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="wrapper" style="
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+        ">
+      <nav class="wrapper">
+        <ul>
+          <a href="/" style="
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-decoration: none;
+              ">Westside&nbsp;NeuroTherapeutics</a>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ourapproach.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tms.html">TMS</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cta">
+            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== TMS CONTENT ===== -->
+  <section class="tms2">
+    <div class="tms2__container">
+
+      <!-- Row 1: Left text / Right hero image -->
+      <div class="tms2__row tms2__row--top">
+        <div class="tms2__col tms2__col--text">
+          <h1 class="tms2__h1">
+            Transcranial Magnetic<br>
+            Stimulation (TMS) Therapy: An<br>
+            Innovative Treatment for<br>
+            Mental Health
+          </h1>
+
+          <p class="tms2__lead">
+            <strong>What is TMS Therapy?</strong> Transcranial Magnetic Stimulation (TMS) is a non-invasive,
+            FDA-approved therapy that uses magnetic pulses to stimulate specific areas of the brain. It’s
+            designed to modulate neural activity and communication in targeted regions, effectively “rebooting”
+            brain function.
+          </p>
+
+          <div class="tms2__accordion">
+            <details>
+              <summary>When is TMS used?</summary>
+              <div class="tms2__acc-body">
+                <p>
+                  At Westside NeuroTherapeutics we specialize in treatment-resistant depression. That
+                  means when anti-depressant medication is not effective enough and other therapies also
+                  don't alleviate the symptoms of depression.
+                </p>
+                <p>
+                  Soon, we hope to expand our clinic to also treat OCD, ADHD, and Substance Use Disorder.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>How Does TMS Work?</summary>
+              <div class="tms2__acc-body">
+                <p>
+                  During a TMS session, the patient sits comfortably while a physician positions a magnetic coil over
+                  their scalp.
+                  The coil generates repetitive magnetic pulses that penetrate the skull and activate specific brain
+                  regions.
+                  Patients may feel a light tapping sensation and hear clicking sounds from the device; the procedure is
+                  painless
+                  and requires no sedation or anesthesia.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>What Is A Treatment Protocol?</summary>
+              <div class="tms2__acc-body">
+                <p>
+                  Typical protocols involve brief daily sessions (about 20-30 minutes), five days per week, over six to
+                  eight weeks.
+                  Your clinician maps the optimal target and adjusts intensity for comfort and clinical response.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
-        <div>
-          <p><strong>Stay in touch - it's good for your head!</strong></p>
-          <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
-        </div>
-        <div>
-          <a href="ourapproach.html">About</a><br />
-          <a href="services.html">Services</a><br />
-          <a href="team.html">Team</a>
-        </div>
-        <div>
-          <a href="blog.html">Blog</a><br />
-          <a href="contact.html">Get Started</a><br />
-          <a href="/privacy-policy">Privacy Policy</a>
+
+        <div class="tms2__col tms2__col--media">
+          <!-- Replace with your image -->
+          <img class="tms2__img" src="src/brains+way+2.jpeg" alt="TMS device and patient">
         </div>
       </div>
-    </footer>
-    <script defer src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.0a2e51d688ed8d2ee408c4b6799e63e7.js"></script>
-  </body>
+
+      <!-- Row 2: Left image / Right accordions -->
+      <div class="tms2__row tms2__row--mid">
+        <div class="tms2__col tms2__col--media">
+          <!-- Replace with your image -->
+          <img class="tms2__img" src="src/brains+way+1.jpeg" alt="TMS treatment session">
+        </div>
+
+        <div class="tms2__col tms2__col--text">
+          <div class="tms2__accordion">
+
+            <details>
+              <summary>Success Rates</summary>
+              <div class="tms2__acc-body">
+                <p>
+                  Many patients with treatment-resistant depression experience significant symptom reduction or
+                  remission.
+                  Results vary; we monitor progress and personalize parameters to maximize benefit.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Safety</summary>
+              <div class="tms2__acc-body">
+                <p>
+                  TMS is well-tolerated. The most common effects are mild scalp discomfort and transient headache.
+                  Your clinician screens for contraindications (e.g., certain implants or seizure history).
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Other Brain Therapies</summary>
+              <div class="tms2__acc-body">
+                <p>
+                  TMS can complement psychotherapy and medication management. We'll discuss options and referrals if a
+                  combined
+                  approach is appropriate.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dark band CTA -->
+      <div class="tms2__band">
+        <p>
+          If you or a loved one has struggled with conventional treatments, TMS may offer a breakthrough solution.
+          This innovative therapy harnesses the power of magnetic stimulation to revitalize brain function and restore
+          mental well-being. <a href="contact.html">Contact us</a> today to explore if TMS is right for you.
+        </p>
+      </div>
+
+      <!-- Centered button -->
+      <div class="tms2__cta">
+        <a class="tms2__cta-btn" href="contact.html">Schedule a FREE Consultation</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="wrapper columns">
+      <div>
+        <img src="src\Full_Logo_Transparent_Background2.png"
+          style="width: 100%; border-radius: 8px; background: var(--accent)" />
+      </div>
+      <div>
+        <p><strong>Stay in touch - it's good for your head!</strong></p>
+        <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
+      </div>
+      <div>
+        <a href="ourapproach.html">About</a><br />
+        <a href="services.html">Services</a><br />
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <a href="blog.html">Blog</a><br />
+        <a href="contact.html">Get Started</a><br />
+        <a href="/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
