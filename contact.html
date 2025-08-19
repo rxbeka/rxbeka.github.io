@@ -1,248 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Westside NeuroTherapeutics</title>
-    <meta
-      name="description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <link rel="canonical" href="https://www.westsideneuro.com" />
-    <link
-      rel="icon"
-      href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w"
-    />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.westsideneuro.com" />
-    <meta property="og:title" content="Westside NeuroTherapeutics" />
-    <meta
-      property="og:description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <meta
-      property="og:image"
-      content="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=750w"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Westside NeuroTherapeutics</title>
+  <meta name="description"
+    content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation." />
+  <link rel="canonical" href="https://www.westsideneuro.com" />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css"
-    />
-    <style>
-      :root {
-        --accent: #002c5a;
-      }
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.westsideneuro.com" />
+  <meta property="og:title" content="Westside NeuroTherapeutics" />
+  <meta property="og:description"
+    content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation." />
+  <meta property="og:image"
+    content="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=750w" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-      body {
-        font-family: "Pontano Sans", sans-serif;
-        line-height: 1.6;
-        color: #222;
-        margin: 0;
-      }
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+  <style>
+    :root { --accent: #002c5a; }
 
-      header {
-        position: sticky;
-        top: 0;
-        background: var(--accent);
-        color: #fff;
-        z-index: 1000;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
-      }
+    body {
+      font-family: "Pontano Sans", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      margin: 0;
+    }
 
-      .wrapper {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 0vw;
-      }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--accent);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    }
 
-      nav ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 1.2rem 0;
-      }
+    .wrapper { max-width: 1400px; margin: 0 auto; padding: 0 0vw; }
 
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-      }
+    nav ul {
+      display: flex; gap: 2rem; list-style: none; margin: 0; padding: 1.2rem 0;
+    }
 
-      nav li {
-        align-content: center;
-      }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; }
+    nav li { align-content: center; }
+    .cta { margin-left: auto; }
 
-      .cta {
-        margin-left: auto;
-      }
+    section { padding: 6rem 0; }
 
-      section {
-        padding: 6rem 0;
-      }
+    .map iframe { width: 100%; height: 350px; border: 0; }
 
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0 0 1rem;
-      }
+    .btn {
+      display: inline-block; padding: 0.6em 1.2em; border-radius: 4px;
+      color: #fff; background: var(--accent); font-weight: 700; text-decoration: none;
+      transition: 0.2s; max-width: 50rem; min-width: 40rem;
+    }
+    .btn:hover { background: #064281; color: #fff; }
 
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        align-items: start;
-        text-align: center;
-      }
-      .contact-left h1 {
-        font-size: 3rem;
-        line-height: 1.1;
-        margin: 0 0 0.75rem;
-      }
-      .contact-left p {
-        margin: 0 0 0.6rem;
-      }
-      .contact-left a {
-        color: inherit;
-        text-decoration: underline;
-      }
-      .contact-right h1 {
-        font-size: 3rem;
-        line-height: 1.1;
-        margin: 0 0 0.75rem;
-      }
-      .contact-right p {
-        margin: 0 0 0.6rem;
-      }
-      .contact-right a {
-        color: inherit;
-        text-decoration: underline;
-      }
-      .hours {
-        list-style: none;
-        padding: 0;
-        margin: 0.5rem 0 0;
-      }
-      .hours li {
-        margin: 0.25rem 0;
-      }
+    h1, h2, h3, h4 { margin: 0 0 1rem; }
 
-      footer {
-        background: var(--accent);
-        padding: 3rem 0;
-      }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start; text-align: center;
+    }
 
-      footer a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.3rem;
-      }
+    .contact-left h1 { font-size: 3rem; line-height: 1.1; margin: 0 0 0.75rem; }
+    .contact-left p { margin: 0 0 0.6rem; }
+    .contact-left a { color: inherit; text-decoration: underline; }
 
-      footer p {
-        color: #fff;
-        font-size: 1.5rem;
-      }
+    .hours { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+    .hours li { margin: 0.25rem 0; }
 
-      footer .columns {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 3rem;
-        text-align: left;
-      }
+    footer { background: var(--accent); padding: 3rem 0; }
+    footer a { color: #fff; text-decoration: none; font-size: 1.3rem; }
+    footer p { color: #fff; font-size: 1.5rem; }
+    footer .columns {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 3rem; text-align: left;
+    }
+    footer .columns>div {
+      display: flex; flex-direction: column; justify-content: center;
+    }
 
-      footer .columns > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+    @media (max-width: 640px) {
+      nav ul { flex-direction: column; gap: 1rem; }
+      .cta { margin: 1rem 0 0; }
+    }
+  </style>
+</head>
 
-      @media (max-width: 640px) {
-        nav ul {
-          flex-direction: column;
-          gap: 1rem;
-        }
+<body>
+  <header>
+    <div class="wrapper"
+      style="display: flex; align-items: center; flex-wrap: wrap; flex-direction: column; justify-content: center;">
+      <nav class="wrapper">
+        <ul>
+          <a href="/"
+            style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ourapproach.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tms.html">TMS</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        .cta {
-          margin: 1rem 0 0;
-        }
-      }
-    </style>
-  </head>
+  <section class="contact">
+    <div class="wrapper contact-grid">
+      <div class="contact-left">
+        <h1>Contact Us!</h1>
+        <p>Call, Text or Email us directly using the information below.</p>
 
-  <body>
-    <header>
-      <div class="wrapper" style="display: flex; align-items: center; flex-wrap: wrap; flex-direction: column; justify-content: center;">
-        <nav class="wrapper">
-          <ul>
-            <a href="/" style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ourapproach.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="tms.html">TMS</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
-          </ul>
-        </nav>
+        <p>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <img src="src\Email_Logo.png" style="width: 2%;" />
+            <a href="mailto:support@westsideneuro.com">support@westsideneuro.com</a>
+          </div>
+        </p>
+
+        <p>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <img src="src\Phone_Logo.png" style="width: 2%;" />
+            <a href="tel:3239680312">323-968-0312</a>
+          </div>
+        </p>
+
+        <!-- Address moved to the map section below -->
+        <br>
+        <h3>Hours of Operation</h3>
+        <ul class="hours">
+          <li>Monday: 9:30am - 5:00pm</li>
+          <li>Tuesday: 9:30am - 5:00pm</li>
+          <li>Wednesday: 9:30am - 5:00pm</li>
+          <li>Thursday: 9:30am - 5:00pm</li>
+          <li>Friday: 9:30am - 5:00pm</li>
+          <li>Saturday: Closed</li>
+          <li>Sunday: Closed</li>
+        </ul>
+
+        <a class="btn" href="https://calendly.com/rebekawestsideneuro/30min" style="color: #fff;">Book a Consultation</a>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="contact">
-      <div class="wrapper contact-grid">
-        <div class="contact-left">
-          <h1>Contact Us!</h1>
-          <p>Email or call us directly using the information below.</p>
-          <p><a href="mailto:support@westsideneuro.com">support@westsideneuro.com</a></p>
-          <p><a href="tel:+13239680312">(323) 968-0312</a></p>
-          <p><a href="https://calendly.com/rebekawestsideneuro/30min">Schedule a Free Consult</a></p>
-          <p>10780 Santa Monica Boulevard, Suite 470, Los Angeles, California 90025</p>
-          <br>
-          <h3>Hours of Operation</h3>
-          <ul class="hours">
-            <li>Monday: 9:00am - 5:00pm</li>
-            <li>Tuesday: 9:00am - 5:00pm</li>
-            <li>Wednesday: 9:00am - 5:00pm</li>
-            <li>Thursday: 9:00am - 5:00pm</li>
-            <li>Friday: 9:00am - 5:00pm</li>
-            <li>Saturday: Closed</li>
-            <li>Sunday: Closed</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <!-- MAP (from home page) + ADDRESS (moved under map) -->
+  <section class="wrapper" style="padding-top: 0;">
+    <div class="map">
+      <iframe loading="lazy"
+        src="https://www.google.com/maps?q=10780+Santa+Monica+Boulevard+%23470,+Los+Angeles,+CA+90025&output=embed"
+        allowfullscreen></iframe>
+    </div>
+    <p style="text-align: center; margin-top: 0.75rem;">
+      10780 Santa Monica Boulevard, Suite 470, Los Angeles, California 90025
+    </p>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="wrapper columns">
-        <div>
-          <img src="src\Full_Logo_Transparent_Background2.png" style="width: 100%; border-radius: 8px; background: var(--accent)" />
-        </div>
-        <div>
-          <p><strong>Stay in touch - it's good for your head!</strong></p>
-          <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
-        </div>
-        <div>
-          <a href="ourapproach.html">About</a><br />
-          <a href="services.html">Services</a><br />
-          <a href="team.html">Team</a>
-        </div>
-        <div>
-          <a href="blog.html">Blog</a><br />
-          <a href="contact.html">Get Started</a><br />
-          <a href="/privacy-policy">Privacy Policy</a>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrapper columns">
+      <div>
+        <img src="src\Full_Logo_Transparent_Background2.png"
+          style="width: 100%; border-radius: 8px; background: var(--accent)" />
       </div>
-    </footer>
-    <script defer src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.0a2e51d688ed8d2ee408c4b6799e63e7.js"></script>
-  </body>
+      <div>
+        <p><strong>Stay in touch - it's good for your head!</strong></p>
+        <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
+      </div>
+      <div>
+        <a href="ourapproach.html">About</a><br />
+        <a href="services.html">Services</a><br />
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <a href="blog.html">Blog</a><br />
+        <a href="contact.html">Get Started</a><br />
+        <a href="/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer
+    src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.0a2e51d688ed8d2ee408c4b6799e63e7.js"></script>
+</body>
 </html>
