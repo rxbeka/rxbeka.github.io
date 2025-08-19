@@ -73,7 +73,43 @@
       flex-direction: column;
       justify-content: center;
     }
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
+      min-width: 40rem;
+      max-width: 50rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
+    }
 
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -1; /* sits behind the text */
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:hover {
+      color: transparent; /* fade text out */
+    }
     /* --- TEAM PAGE SPECIFIC --- */
 .team-hero{ text-align:center; padding:clamp(2rem,4vw,4rem) 1rem; }
 .team-hero h1{ font-size:clamp(2rem,5vw,3rem); margin:.25rem 0 .75rem; }
@@ -90,10 +126,6 @@
 .bio h3{ font-size:1.4rem; margin:.15rem 0 .35rem; }
 .role{ font-weight:700; margin-bottom:.5rem; color:#fff; }
 .bio p{ margin:0 0 .75rem; line-height:1.6; font-size:1.05rem; }
-
-/* Keep existing CTA style */
-.button-blue{ background:var(--accent); color:#fff!important; padding:.6rem 1rem; border-radius:.6rem; text-decoration:none; font-weight:600; transition:filter .2s ease; }
-.button-blue:hover{ filter:brightness(1.1); }
 </style>
 </head>
 
@@ -165,7 +197,7 @@
   </section>
 
   <section class="wrapper" style="text-align:center; padding: 0 1rem 4rem;">
-    <a class="button-blue title-case" href="contact.html">Book A Free Consultation</a>
+    <a class="btn" href="contact.html">Book A Free Consultation</a>
   </section>
 </main>
 
