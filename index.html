@@ -76,6 +76,7 @@
     }
 
     .btn {
+      position: relative;
       display: inline-block;
       padding: 0.6em 1.2em;
       border-radius: 4px;
@@ -83,15 +84,34 @@
       background: var(--accent);
       font-weight: 700;
       text-decoration: none;
-      transition: 0.2s;
-      max-width: 50rem;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
       min-width: 40rem;
+      max-width: 50rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -1; /* sits behind the text */
+    }
+
+    .btn:hover::before {
+      opacity: 1;
     }
 
     .btn:hover {
-      background: #064281;
-      color: #fff;
+      color: transparent; /* fade text out */
     }
+
 
     section {
       padding: 6rem 0;
@@ -214,6 +234,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="tms.html">TMS</a></li>
           <li><a href="blog.html">Blog</a></li>
+          <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="cta">
             <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
@@ -261,7 +282,7 @@
           flex-wrap: wrap;
           flex-direction: column;
           justify-content: center;">
-          <img src="src\Bystritsky.png" alt="Patient after TMS therapy" style="width: 40%; border-radius: 8px" />
+          <img src="src\Bystritsky.png" alt="Dr Bystritsky" style="width: 40%; border-radius: 8px" />
         </div>
         <section class="wrapper testimonial">
           <blockquote>
@@ -271,7 +292,7 @@
             Professor Emeritus for Psychiatry at UCLA, founder and former director of the Anxiety Disorders Program and Targeted Brain Stimulation Program for over 20 years
             <br>
             <br>
-            <strong>Pioneering TMS Expert:</strong> Key figure in introducing dTMS technology to the U.S. with over 35 years of experience in neuroscience and Psychiatry
+            <strong>Pioneering TMS Expert:</strong> Key figure in introducing dTMS technology to the U.S. with over 35 years of experience in neuroscience and psychiatry
             <br>
             <br>
             <strong>Recognized Excellence:</strong> Listed in Best Doctors in America for 20 years, showcasing recognition and many research awards
@@ -327,7 +348,7 @@
       <br>
       <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
         <img src="src\Email_Logo.png" style="width: 5%;" />
-        <a href="mailto:support@westsideneuro.com">support@westsideneuro.com</a>
+        <a href="mailto:rfodor@westsideneuro.com">rfodor@westsideneuro.com</a>
       </div>
     </div>
   </section>
@@ -340,7 +361,7 @@
     <div class="wrapper">
       <h2 style="color: --accent">Get Started With TMS Today!</h2>
       <p>
-        <a class="btn" href="https://calendly.com/rebekawestsideneuro/30min">Book a Consultation</a>
+        <a class="btn" href="https://calendly.com/jmay-l9i4/30min?month=2024-04">Book a Consultation</a>
       </p>
     </div>
   </section>
@@ -357,19 +378,18 @@
         <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
       </div>
       <div>
-        <a href="ourapproach.html">About</a><br />
+        <a href="about.html">About</a><br />
         <a href="services.html">Services</a><br />
         <a href="team.html">Team</a>
       </div>
       <div>
+        <a href="ourapproach.html">Our Approach</a><br />
         <a href="blog.html">Blog</a><br />
         <a href="contact.html">Get Started</a><br />
         <a href="/privacy-policy">Privacy Policy</a>
       </div>
     </div>
   </footer>
-  <script defer
-    src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.0a2e51d688ed8d2ee408c4b6799e63e7.js"></script>
 </body>
 
 </html>

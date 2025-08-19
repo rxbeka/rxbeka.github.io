@@ -79,6 +79,7 @@
     }
 
     .btn {
+      position: relative;
       display: inline-block;
       padding: 0.6em 1.2em;
       border-radius: 4px;
@@ -86,15 +87,33 @@
       background: var(--accent);
       font-weight: 700;
       text-decoration: none;
-      text-align: center;
-      transition: 0.2s;
-      max-width: 50rem;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
       min-width: 40rem;
+      max-width: 50rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -1; /* sits behind the text */
+    }
+
+    .btn:hover::before {
+      opacity: 1;
     }
 
     .btn:hover {
-      background: #064281;
-      color: #fff;
+      color: transparent; /* fade text out */
     }
 
     h1,
@@ -205,6 +224,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="tms.html">TMS</a></li>
           <li><a href="blog.html">Blog</a></li>
+          <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
         </ul>
