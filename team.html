@@ -1,184 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Westside NeuroTherapeutics</title>
-    <meta
-      name="description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <link rel="canonical" href="https://www.westsideneuro.com" />
-    <link
-      rel="icon"
-      href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Westside NeuroTherapeutics - Team</title>
+  <meta name="description"
+    content="Meet the team at Westside NeuroTherapeutics, specialists in TMS therapy, psychology, and hypnotherapy." />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.westsideneuro.com" />
-    <meta property="og:title" content="Westside NeuroTherapeutics" />
-    <meta
-      property="og:description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <meta
-      property="og:image"
-      content="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=750w"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      --accent: #002c5a;
+    }
+    body {
+      font-family: "Pontano Sans", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      margin: 0;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--accent);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 1.2rem 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav li {
+      align-content: center;
+    }
+    .cta {
+      margin-left: auto;
+    }
+    footer {
+      background: var(--accent);
+      padding: 3rem 0;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+    }
+    footer p {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    footer .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 3rem;
+      text-align: left;
+    }
+    footer .columns > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css"
-    />
-    <style>
-      :root {
-        --accent: #002c5a;
-      }
+    /* --- TEAM PAGE SPECIFIC --- */
+.team-hero{ text-align:center; padding:clamp(2rem,4vw,4rem) 1rem; }
+.team-hero h1{ font-size:clamp(2rem,5vw,3rem); margin:.25rem 0 .75rem; }
+.title-case{ text-transform:capitalize; }
 
-      body {
-        font-family: "Pontano Sans", sans-serif;
-        line-height: 1.6;
-        color: #222;
-        margin: 0;
-      }
+/* Alternating image/text rows (no boxes, white bg) */
+.profile-section{ padding:0 0 3rem; }
+.profile-row{ display:grid; grid-template-columns:minmax(260px,1fr) 1.5fr; gap:clamp(1rem,4vw,3rem); align-items:center; max-width:1100px; margin:0 auto; padding:2rem 1rem; }
+/* Alternate layout by swapping order */
+.profile-row:nth-child(even) .photo{ order:2; } 
+.profile-row:nth-child(even) .bio{ order:1; }
 
-      header {
-        position: sticky;
-        top: 0;
-        background: var(--accent);
-        color: #fff;
-        z-index: 1000;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
-      }
+.photo{ width:100%; aspect-ratio:4/3; background:#fff; border-radius:12px; }
+.bio h3{ font-size:1.4rem; margin:.15rem 0 .35rem; }
+.role{ font-weight:700; margin-bottom:.5rem; color:#fff; }
+.bio p{ margin:0 0 .75rem; line-height:1.6; font-size:1.05rem; }
 
-      .wrapper {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 0vw;
-      }
+/* Keep existing CTA style */
+.button-blue{ background:var(--accent); color:#fff!important; padding:.6rem 1rem; border-radius:.6rem; text-decoration:none; font-weight:600; transition:filter .2s ease; }
+.button-blue:hover{ filter:brightness(1.1); }
+</style>
+</head>
 
-      nav ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 1.2rem 0;
-      }
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="wrapper" style="display:flex; align-items:center; flex-wrap:wrap; flex-direction:column; justify-content:center;">
+      <nav class="wrapper">
+        <ul>
+          <a href="/" style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ourapproach.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tms.html">TMS</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-      }
+  <!-- MAIN CONTENT -->
+  <main>
+  <section class="team-hero wrapper">
+    <h1 class="title-case">Meet The Team</h1>
+    <p>Compassionate clinicians and researchers focused on safe, effective neuromodulation.</p>
+  </section>
 
-      nav li {
-        align-content: center;
-      }
-
-      .cta {
-        margin-left: auto;
-      }
-
-      section {
-        padding: 6rem 0;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0 0 1rem;
-      }
-
-      footer {
-        background: var(--accent);
-        padding: 3rem 0;
-      }
-
-      footer a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.3rem;
-      }
-
-      footer p {
-        color: #fff;
-        font-size: 1.5rem;
-      }
-
-      footer .columns {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 3rem;
-        text-align: left;
-      }
-
-      footer .columns > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      @media (max-width: 640px) {
-        nav ul {
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        .cta {
-          margin: 1rem 0 0;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="wrapper" style="display: flex; align-items: center; flex-wrap: wrap; flex-direction: column; justify-content: center;">
-        <nav class="wrapper">
-          <ul>
-            <a href="/" style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ourapproach.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="tms.html">TMS</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="wrapper columns">
-        <div>
-          <img src="src\Full_Logo_Transparent_Background2.png" style="width: 100%; border-radius: 8px; background: var(--accent)" />
-        </div>
-        <div>
-          <p><strong>Stay in touch - it's good for your head!</strong></p>
-          <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
-        </div>
-        <div>
-          <a href="ourapproach.html">About</a><br />
-          <a href="services.html">Services</a><br />
-          <a href="team.html">Team</a>
-        </div>
-        <div>
-          <a href="blog.html">Blog</a><br />
-          <a href="contact.html">Get Started</a><br />
-          <a href="/privacy-policy">Privacy Policy</a>
+  <section class="profile-section">
+    <!-- Row 1: Pic | Bio -->
+    <div class="profile-row">
+      <img src="src\Bystritsky.png" alt="Dr Bystritsky" style="width: 100%; border-radius: 8px" />
+      <div class="bio">
+        <div class="role title-case">Founder, Medical Director</div>
+        <h3 class="title-case">Alexander Bystritsky, M.D., Ph.D.</h3>
+        <p>A pioneer in brain stimulation therapies, Dr. Bystritsky advances mental health treatments such as Transcranial Magnetic Stimulation (TMS). He has over 240 peer‑reviewed publications, several patents, and leadership roles at UCLA's Anxiety Disorders Program and Targeted Brain Stimulation Program.</p>
+        <p>After earning his M.D. and Ph.D. degrees in Russia, where his groundbreaking research garnered national awards, Dr. Bystritsky continued his training in the United States. With over 240 peer-reviewed publications, numerous honors, and several patents to his name, Dr. Bystritsky's contributions have been instrumental in the development of innovative therapies like Transcranial Magnetic Stimulation (TMS) and Low-Intensity Focused Ultrasound  (LIFU).</p>
+        <p>As the director of UCLA's Anxiety Disorders Program and Targeted Brain Stimulation Program, Dr. Bystritsky continues to push the boundaries of what's possible in mental health treatment. His passion for scientific rigor and compassionate care is the driving force behind Westside NeuroTherapeutics.</p>
+        <div style="text-align: center;">
+          <a href="https://scholar.google.com/citations?user=Sh3bBuUAAAAJ&hl=en&oi=ao" style=" color: #222;">Google Scholar</a>
         </div>
       </div>
-    </footer>
-    <script defer src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.0a2e51d688ed8d2ee408c4b6799e63e7.js"></script>
-  </body>
+    </div>
+
+    <!-- Row 2: Bio | Pic -->
+    <div class="profile-row">
+      <div class="bio">
+        <div class="role title-case">Clinical Psychologist</div>
+        <h3 class="title-case">Tanya Vapnik, Ph.D.</h3>
+        <p>As a Clinical Psychologist, Dr. Vapnik evaluates and monitors patient progress for TMS Therapy, a key component of our comprehensive mental health services. She earned her Doctorate in 1998 from the California Graduate Institute, Los Angeles. She is a member of several professional organizations including the Obsessive Compulsive Foundation, the Anxiety Disorders Association of America, and the TMS Society. She serves as a President at the CalNeuro Research Group, and Assistant Professor at UCLA Semel Institute for Neuroscience and Human Behavior, while maintaining her private practice in Los Angeles. Dr. Vapnik evaluates and monitors the patient’s progress for TMS.</p>
+      </div>
+      <img src="src/Dr+Vapnik.jpeg" alt="Dr Vapnik" style="width: 100%; border-radius: 8px" />
+    </div>
+
+    <!-- Row 3: Pic | Bio -->
+    <div class="profile-row">
+      <img src="src/Rebeka+Headshot.jpg" alt="Rebeka Fodor" style="width: 100%; border-radius: 8px" />
+      <div class="bio">
+        <div class="role title-case">Clinic Coordinator And Hypnotherapist</div>
+        <h3 class="title-case">Rebeka Fodor, C.Ht.</h3>
+        <p>Rebeka, oversees all aspects of patient care at Westside NeuroTherapeutics, guiding clients through the personalized TMS treatment process. She is also a hypnotherapist as well as the digital marketing and social media expert at Westside Neurotherapeutics. With a strong passion for holistic healing, she founded Transcendental Hypnotherapy, where she helps clients overcome challenges like depression, anxiety, PTSD, and chronic pain through hypnotherapy. Rebeka’s work is grounded in a serious dedication to helping others transcend limitations and achieve transformative healing through combining elements of science and spirit, balancing the mind, body, and soul.</p>
+        <div style="text-align: center;">
+          <a href="rfodor@westsideneuro.com" style=" color: #222;">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper" style="text-align:center; padding: 0 1rem 4rem;">
+    <a class="button-blue title-case" href="contact.html">Book A Free Consultation</a>
+  </section>
+</main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrapper columns">
+      <div>
+        <img src="src\Full_Logo_Transparent_Background2.png" style="width: 100%; border-radius: 8px; background: var(--accent)" />
+      </div>
+      <div>
+        <p><strong>Stay in touch - it's good for your head!</strong></p>
+        <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
+      </div>
+      <div>
+        <a href="ourapproach.html">About</a><br />
+        <a href="services.html">Services</a><br />
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <a href="blog.html">Blog</a><br />
+        <a href="contact.html">Get Started</a><br />
+        <a href="/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
