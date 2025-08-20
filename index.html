@@ -32,7 +32,7 @@
     }
 
     body {
-      font-family: "Pontano Sans", sans-serif;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       line-height: 1.6;
       color: #222;
       margin: 0;
@@ -152,9 +152,35 @@
       width: 85%;
     }
 
-    .two-col {
-      grid-template-columns: repeat(auto-fit, minmax(35%, 45%));
+    .triangle-layout {
+      display: grid;
+      grid-template-areas:
+        "intro intro"
+        "image bio";
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+      margin: auto;
+      width: 85%;
     }
+
+    .intro {
+      grid-area: intro;
+      text-align: center;
+      max-width: 70ch;   /* keeps text in a readable width */
+      margin: 0 auto;    /* centers it */
+      padding: 1rem 0; 
+    }
+
+    .image {
+      grid-area: image;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .bio {
+      grid-area: bio;
+}
 
     .testimonial {
       background: #f9f9f9;
@@ -252,7 +278,7 @@
         When medication fails, <strong>TMS brings new hope.</strong>
       </h1>
       <h2 style="color: white">
-        <em>Your revolutionary treatment for depression, smoking cessation
+        <em>Your revolutionary treatment for depression, Anxiety,
           &amp; OCD.</em>
       </h2>
       <p><a class="btn btn-primary" href="#learn-more">Learn&nbsp;More</a></p>
@@ -261,48 +287,47 @@
 
   <!-- INTRO -->
   <section id="learn-more">
-    <div class="wrapper grid two-col">
-      <div>
-        <h2>Let Us Help You Get Your Life Back</h2>
-        <p>
-          When you're struggling with treatment-resistant depression or
-          post-partum depression, getting the right help can feel hopeless —
-          but it doesn't have to. TMS offers proven relief when therapy and
-          medications haven't helped.
-        </p>
-        <p>
-          If you've tried two or more antidepressants without relief,
-          <strong>Transcranial Magnetic Stimulation (TMS)</strong> may be for
-          you. It's FDA-approved, non-invasive and medication-free.
-        </p>
-      </div>
-
-      <div>
-        <div class="wrapper" style="display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          flex-direction: column;
-          justify-content: center;">
-          <img src="src\Bystritsky.png" alt="Dr Bystritsky" style="width: 40%; border-radius: 8px" />
-        </div>
-        <section class="wrapper testimonial">
-          <blockquote>
-            <br>
-            <strong>Bystritsky, M.D., Ph.D., Medical Director</strong>
-            <br>
-            Professor Emeritus for Psychiatry at UCLA, founder and former director of the Anxiety Disorders Program and Targeted Brain Stimulation Program for over 20 years
-            <br>
-            <br>
-            <strong>Pioneering TMS Expert:</strong> Key figure in introducing dTMS technology to the U.S. with over 35 years of experience in neuroscience and psychiatry
-            <br>
-            <br>
-            <strong>Recognized Excellence:</strong> Listed in Best Doctors in America for 20 years, showcasing recognition and many research awards
-            <br>
-          </blockquote>
-        </section>
-      </div>
+  <div class="wrapper grid triangle-layout">
+    
+    <!-- Intro spans full width top -->
+    <div class="intro">
+      <h2>Let Us Help You Get Your Life Back</h2>
+      <p>
+        When you're struggling with treatment-resistant depression or
+        post-partum depression, getting the right help can feel hopeless —
+        but it doesn't have to. TMS offers proven relief when therapy and
+        medications haven't helped.
+      </p>
+      <p>
+        If you've tried two or more antidepressants without relief,
+        <strong>Transcranial Magnetic Stimulation</strong> may be for
+        you. It's FDA-approved, non-invasive and medication-free.
+      </p>
     </div>
-  </section>
+
+    <!-- Bottom left: Picture -->
+    <div class="image">
+      <img src="src/Bystritsky.png" alt="Dr Bystritsky" style="width: 50%; border-radius: 8px;" />
+    </div>
+
+    <!-- Bottom right: Bio -->
+    <div class="bio">
+      <section class="wrapper testimonial">
+        <blockquote>
+          <strong>Bystritsky, M.D., Ph.D., Medical Director</strong>
+          <br>
+          Professor Emeritus for Psychiatry at UCLA, founder and former director of the Anxiety Disorders Program and Targeted Brain Stimulation Program for over 20 years
+          <br><br>
+          <strong>Pioneering TMS Expert:</strong> Key figure in introducing dTMS technology to the U.S. with over 35 years of experience in neuroscience and psychiatry
+          <br><br>
+          <strong>Recognized Excellence:</strong> Listed in Best Doctors in America for 20 years, showcasing recognition and many research awards
+        </blockquote>
+      </section>
+    </div>
+
+  </div>
+</section>
+
 
   <div class="wrapper" style="background-color: var(--accent); height: 0.25rem;width: 80%;border-radius: 8px"></div>
 
