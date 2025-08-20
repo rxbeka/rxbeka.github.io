@@ -161,6 +161,42 @@
         margin: 1rem 0 0;
       }
     }
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
+      min-width: 40rem;
+      max-width: 50rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -1; /* sits behind the text */
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:hover {
+      color: transparent; /* fade text out */
+    }
   </style>
 </head>
 
@@ -185,6 +221,7 @@
           <li><a href="ourapproach.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="tms.html">TMS</a></li>
+          <li><a href="research.html">Research</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -198,47 +235,41 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrapper inner">
-      <h1>Depression starts in the brain, that's where you should treat it. </h1>
+      <h1>We Don’t Just Treat Symptoms — We Treat The Source. </h1>
     </div>
   </section>
 
   <!-- OUR APPROACH -->
   <section style="display: flex; align-items: center; justify-content: center;">
-    <div style="text-align: center; max-width: 60%; align-self: center">
-      <h2>Our approach</h2>
+    <div style="text-align: center; max-width: 30%; align-self: center">
+      <h2>Our Approach</h2>
       <h3>
         At Westside NeuroTherapeutics, we don't just treat symptoms, we treat individuals. Our approach to
-        Transcranial Magnetic Stimulation (TMS) therapy goes beyond the conventional. We understand that each brain is
+        Transcranial Magnetic Stimulation therapy goes beyond the conventional. We understand that each brain is
         as unique as the person it belongs to, which is why we personalize every aspect of your treatment.
         </h3>
-      <div style="text-align: left; font-size: 18px;">
-        <strong>Personalization at Its Core:</strong>&nbsp;From your first consultation, we're committed to understanding your unique
-        journey with depression. Our psychiatrists perform a thorough evaluation to craft a treatment plan that is as
-        individual as you are.
+      <div style="text-align: center; font-size: 18px;">
+        <strong>Personalized Care:</strong><br>Your journey starts with a consultation designed to understand your needs and your story. From there, our team of psychiatrists create a treatment plan tailored specifically to you.
         <br>
         <br>
-        <strong>Targeted Treatment:</strong>&nbsp;Utilizing cutting-edge technology, we ensure the magnetic pulses of TMS therapy
-        are precisely delivered. This precision means we can directly target the areas of your brain that need
-        rejuvenation, offering you the best possible outcomes.
+        <strong>Targeted Treatment:</strong>
+        <br>
+        Our FDA-approved TMS technology delivers magnetic pulses directly to the areas of your brain that need rejuvenation. This precision ensures we can offer you the best possible outcomes.
         <br>
         <br>
-        <strong>Committed to Comfort:</strong>&nbsp;We believe in making your path to recovery as comfortable and stress-free as possible.
-        Our treatment sessions are designed to be a peaceful time for healing and with no downtime, you can continue
-        with your day right after.
+        <strong>Committed to Comfort:</strong>
+        <br>
+We believe recovery should feel safe, comfortable, and stress-free. That’s why our sessions are calm, non-invasive, and medication-free. Our treatment plan is designed to be a peaceful time for healing and with no downtime, you can continue with your day right after! From navigating insurance, keeping updated with the latest research, along with walking you through every detail – our team is here to support you through each step.
         <br>
         <br>
-        <strong>Transparent and Supportive:</strong>&nbsp;From navigating insurance coverage to understanding the treatment process, we're
-        with you every step of the way. We ensure our therapy is accessible, understandable, and supported by the
-        latest research.
+        <strong>Your Partner in Healing:</strong>
+        <br>
+        When you choose Westside NeuroTherapeutics, you’re not just starting a treatment — you’re gaining a partner committed to helping you reclaim your life and rediscover what well-being feels like.
         <br>
         <br>
-        <strong>Your Partner in Healing:</strong>&nbsp; Our goal is not only to provide you with the most effective treatment but also to
-        empower you to reclaim your life from depression. With Westside NeuroTherapeutics, you're not just receiving
-        treatment, you're gaining a partner dedicated to your well-being.
-        <br>
-        <br>
-        <strong>Take the first Step:</strong>&nbsp; Ready to explore a life beyond depression? Book your free consultation today and discover
-        the personalized and compassionate care at Westside NeuroTherapeutics.
+        <p>
+        <a class="btn" href="https://calendly.com/jmay-l9i4/30min?month=2024-04">Book Your Free Consultation</a>
+        </p>
       </div>
     </div>
   </section>

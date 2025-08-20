@@ -4,151 +4,138 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Westside NeuroTherapeutics</title>
-    <meta
-      name="description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <link rel="canonical" href="https://www.westsideneuro.com" />
-    <link
-      rel="icon"
-      href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w"
-    />
+    <title>Research Explained — Westside NeuroTherapeutics</title>
+    <meta name="description" content="Plain-language summaries of peer-reviewed TMS research curated by Westside NeuroTherapeutics." />
+    <link rel="canonical" href="https://www.westsideneuro.com/research" />
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.westsideneuro.com" />
-    <meta property="og:title" content="Westside NeuroTherapeutics" />
-    <meta
-      property="og:description"
-      content="Discover non-invasive TMS therapy in Santa Monica for treatment-resistant depression, anxiety, OCD and smoking cessation."
-    />
-    <meta
-      property="og:image"
-      content="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=750w"
-    />
+    <meta property="og:url" content="https://www.westsideneuro.com/research" />
+    <meta property="og:title" content="Research Explained — Westside NeuroTherapeutics" />
+    <meta property="og:description" content="Plain-language summaries of peer-reviewed TMS research curated by Westside NeuroTherapeutics." />
+    <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=750w" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+
     <style>
-      :root {
-        --accent: #002c5a;
+      :root { --accent:#002c5a; }
+
+      /* Base (from site) */
+      body { font-family:"Pontano Sans",sans-serif; line-height:1.6; color:#222; margin:0; }
+      header { position:sticky; top:0; background:var(--accent); color:#fff; z-index:1000; box-shadow:0 3px 7px rgba(0,0,0,.15); }
+      .wrapper { max-width:1400px; margin:0 auto; padding:0 0vw; }
+      nav ul { display:flex; gap:2rem; list-style:none; margin:0; padding:1.2rem 0; }
+      nav a { color:#fff; text-decoration:none; font-weight:600; }
+      nav li { align-content:center; }
+      .cta { margin-left:auto; }
+      footer { background:var(--accent); padding:3rem 0; }
+      footer a { color:#fff; text-decoration:none; font-size:1.3rem; }
+      footer p { color:#fff; font-size:1.5rem; }
+      footer .columns { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:3rem; text-align:left; }
+      footer .columns>div { display:flex; flex-direction:column; justify-content:center; }
+
+      /* Research page */
+      main { padding:4rem 0 5rem; }
+      .hero {
+        padding:4rem 0 2rem;
+        text-align:center;
       }
-
-      body {
-        font-family: "Pontano Sans", sans-serif;
-        line-height: 1.6;
-        color: #222;
-        margin: 0;
+      .hero h1 {
+        margin:0 0 .5rem;
+        font-size:3rem;
+        line-height:1.1;
+        color:#0b2545;
       }
+      .hero p { margin:0 auto; max-width:840px; font-size:1.15rem; color:#444; }
 
-      header {
-        position: sticky;
-        top: 0;
-        background: var(--accent);
-        color: #fff;
-        z-index: 1000;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      .cards {
+        margin-top:2.5rem;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:2rem;
       }
-
-      .wrapper {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 0vw;
+      .card {
+        border:1px solid #e6eef5;
+        border-radius:12px;
+        padding:1.25rem 1.25rem 1.5rem;
+        background:#fff;
+        box-shadow:0 6px 18px rgba(0,0,0,0.06);
+        display:flex; flex-direction:column;
       }
-
-      nav ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 1.2rem 0;
+      .card h3 {
+        margin:.25rem 0 .5rem;
+        font-size:1.35rem;
+        line-height:1.25;
+        color:#0b2545;
       }
-
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
+      .meta {
+        font-size:.95rem;
+        color:#51627a;
+        margin-bottom:.5rem;
       }
+      .excerpt { margin:.25rem 0 1rem; color:#2a2a2a; }
+      .btn {
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
+      transition: color 1.5s ease-in-out; /* fade text color */
+    }
 
-      nav li {
-        align-content: center;
-      }
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -1; /* sits behind the text */
+    }
 
-      .cta {
-        margin-left: auto;
-      }
+    .btn:hover::before {
+      opacity: 1;
+    }
 
-      section {
-        padding: 6rem 0;
-      }
+    .btn:hover {
+      color: transparent; /* fade text out */
+    }
 
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0 0 1rem;
-      }
+      /* Simple tag row if needed */
+      .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem; }
+      .tag { font-size:.82rem; color:#0b2545; background:#e8f1fb; border:1px solid #d7e5f7; padding:.2rem .5rem; border-radius:999px; }
 
-      footer {
-        background: var(--accent);
-        padding: 3rem 0;
-      }
-
-      footer a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.3rem;
-      }
-
-      footer p {
-        color: #fff;
-        font-size: 1.5rem;
-      }
-
-      footer .columns {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 3rem;
-        text-align: left;
-      }
-
-      footer .columns > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      @media (max-width: 640px) {
-        nav ul {
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        .cta {
-          margin: 1rem 0 0;
-        }
+      @media (max-width:640px){
+        nav ul { flex-direction:column; gap:1rem; }
+        .cta { margin:1rem 0 0; }
+        .hero h1 { font-size:2.2rem; }
       }
     </style>
   </head>
 
   <body>
+    <!-- Header -->
     <header>
-      <div class="wrapper" style="display: flex; align-items: center; flex-wrap: wrap; flex-direction: column; justify-content: center;">
+      <div class="wrapper" style="display:flex;align-items:center;flex-wrap:wrap;flex-direction:column;justify-content:center;">
         <nav class="wrapper">
           <ul>
-            <a href="/" style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
+            <a href="/" style="color:#fff;font-size:1.3rem;font-weight:700;text-decoration:none;">Westside&nbsp;NeuroTherapeutics</a>
             <li><a href="index.html">Home</a></li>
             <li><a href="ourapproach.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="tms.html">TMS</a></li>
+          <li><a href="research.html">Research</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
@@ -157,15 +144,87 @@
       </div>
     </header>
 
-    <!-- FOOTER -->
+    <!-- Main -->
+    <main>
+      <div class="wrapper">
+        <section class="hero">
+          <h1>Research Explained</h1>
+          <p>We translate the latest peer-reviewed TMS studies into clear, actionable insights. Below are selected summaries with links to the original write-ups and sources.</p>
+        </section>
+
+        <section class="cards">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="meta">By Jezabel May — May 15</div>
+            <h3><a href="Research pages/ResistantDepression.html" style="text-decoration:none;color:inherit;">
+              Unlocking Hope: The Superior Efficacy of rTMS for Treatment-Resistant Depression
+            </a></h3>
+            <p class="excerpt">
+              Harvard-led data show rTMS augmentation reduced depressive symptoms more than switching to venlafaxine XR, with response/remission advantages over aripiprazole augmentation.
+            </p>
+            <div class="tags">
+              <span class="tag">TMS</span><span class="tag">TRD</span><span class="tag">MDD</span>
+            </div>
+            <a class="btn" href="Research pages/ResistantDepression.html">Read more</a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="meta">By Jezabel May — May 7</div>
+            <h3><a href="https://www.brainsway.com/how-does-it-work/build-deep-vs-traditional-tms/" style="text-decoration:none;color:inherit;" target="_blank" rel="noopener">
+              Deep TMS H1 Coil: Results from large post-marketing data
+            </a></h3>
+            <p class="excerpt">
+              Overview of Deep TMS (H-coil) vs. first-generation figure-8 coils, summarizing clinical evidence and practical considerations drawn from BrainsWay resources.
+            </p>
+            <div class="tags">
+              <span class="tag">Deep&nbsp;TMS</span><span class="tag">H1&nbsp;Coil</span>
+            </div>
+            <a class="btn" href="https://www.brainsway.com/how-does-it-work/build-deep-vs-traditional-tms/" target="_blank" rel="noopener">View source</a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="meta">By Jezabel May — Oct 8</div>
+            <h3><a href="Research pages/LongTermEfficacy.html" style="text-decoration:none;color:inherit;">
+              Long-term efficacy of repeated daily prefrontal TMS in treatment-resistant depression
+            </a></h3>
+            <p class="excerpt">
+              Follow-up data indicate durable remission in TRD after acute TMS, with low relapse rates when maintenance (taper, pharmacotherapy, or additional TMS) is applied.
+            </p>
+            <div class="tags">
+              <span class="tag">Durability</span><span class="tag">Follow-up</span>
+            </div>
+            <a class="btn" href="Research pages/LongTermEfficacy.html">Read more</a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <div class="meta">By Jezabel May — May 28</div>
+            <h3><a href="Research pages/PTSD.html" style="text-decoration:none;color:inherit;">
+              Durability of deep TMS for veterans with TRD, PTSD, and suicide risk
+            </a></h3>
+            <p class="excerpt">
+              In veterans, deep TMS was associated with sustained reductions in depression, PTSD symptoms, and suicidal ideation through 6-month follow-up.
+            </p>
+            <div class="tags">
+              <span class="tag">Veterans</span><span class="tag">PTSD</span><span class="tag">Suicide&nbsp;Risk</span>
+            </div>
+            <a class="btn" href="Research pages/PTSD.html">Read more</a>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
     <footer>
       <div class="wrapper columns">
         <div>
-          <img src="src\Full_Logo_Transparent_Background2.png" style="width: 100%; border-radius: 8px; background: var(--accent)" />
+          <img src="src/Full_Logo_Transparent_Background2.png" style="width:100%;border-radius:8px;background:var(--accent)" alt="Westside NeuroTherapeutics logo" />
         </div>
         <div>
           <p><strong>Stay in touch - it's good for your head!</strong></p>
-          <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
+          <p><em>Questions?&nbsp;</em> <a href="contact.html">Contact Us</a></p>
         </div>
         <div>
           <a href="ourapproach.html">About</a><br />
@@ -179,6 +238,5 @@
         </div>
       </div>
     </footer>
-    <script defer src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.0a2e51d688ed8d2ee408c4b6799e63e7.js"></script>
   </body>
 </html>
