@@ -10,11 +10,25 @@
     content="Our simple, personal, results-driven approach to TMS: listen & evaluate, tailor your plan, then track, adjust and support." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet"
+  href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+  <link rel="canonical" href="https://www.westsideneuro.com" />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
   <style>
         :root {
       --accent: #002c5a;
     }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     body {
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       line-height: 1.6;
@@ -28,19 +42,25 @@
       color: #fff;
       z-index: 1000;
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      height: 5vh;
     }
     nav ul {
       display: flex;
       gap: 2rem;
       list-style: none;
       margin: 0;
-      padding: 1.2rem 0;
+      padding: 0.8rem 0;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      margin: auto;
+      align-content: center;
+      
     }
+
     nav li {
       align-content: center;
     }
@@ -91,27 +111,27 @@
 
     /* hero */
     .hero {
+      background: url("https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=1500w") center/cover fixed;
       position: relative;
-      min-height: 64vh;
-      display: flex;
-      align-items: flex-end;
-      background: url("https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=2000w") center/cover no-repeat;
       color: #fff;
+      text-align: center;
+      height: 85vh;
     }
 
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, .28) 0%, rgba(0, 0, 0, .58) 68%);
+      background: rgba(0, 0, 0, 0.4);
     }
 
     .hero .inner {
       position: relative;
+      margin-top: 10%;
+      margin-bottom: 20%;
       z-index: 1;
-      padding: 8vh 0;
+      /* margin: auto; */
     }
-
 
     /* footer */
     footer {
@@ -172,22 +192,21 @@
       text-decoration: none;
       overflow: hidden; /* keeps pseudo-element clipped to button */
       z-index: 1;       /* ensure text stays above the image */
-      min-width: 40rem;
-      max-width: 50rem;
+      min-width: 10rem;
+      max-width: 20rem;
       transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
     }
-
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-      z-index: -1; /* sits behind the text */
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
     }
 
     .btn:hover::before {
@@ -211,7 +230,7 @@
         ">
       <nav class="wrapper">
         <ul>
-          <a href="/" style="
+          <a style="
                 color: #fff;
                 font-size: 1.3rem;
                 font-weight: 700;
@@ -225,7 +244,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="cta">
+          <li>
             <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
           </li>
         </ul>
@@ -235,7 +254,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrapper inner">
-      <h1 style="text-align: center;">We Don’t Just Treat Symptoms — <br>We Treat The Source. </h1>
+      <h1 style="text-align: center; color: white;">We Don’t Just Treat Symptoms — <br>We Treat The Source. </h1>
     </div>
   </section>
 

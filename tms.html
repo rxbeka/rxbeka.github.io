@@ -10,12 +10,12 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+  <link rel="canonical" href="https://www.westsideneuro.com" />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
 
-  <!-- Base site styles you already use (optional) -->
-  <link rel="stylesheet" href="site.css">
-
-  <!-- Page-specific styles -->
-  <link rel="stylesheet" href="tms.css">
   <style>
     /* Tiny layout helpers that match your base */
     :root {
@@ -29,13 +29,17 @@
       line-height: 1.6;
     }
 
-    .wrapper {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 0;
+    ::-webkit-scrollbar {
+      display: none;
     }
 
-        header {
+    .body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
+    header {
       position: sticky;
       top: 0;
       background: var(--accent);
@@ -50,25 +54,81 @@
       padding: 0 0vw;
     }
 
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--accent);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      height: 5vh;;
+    }
+
+    .wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 0vw;
+    }
+
     nav ul {
       display: flex;
       gap: 2rem;
       list-style: none;
       margin: 0;
-      padding: 1.2rem 0;
+      padding: 0.8rem 0;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      margin: auto;
+      align-content: center;
+      
     }
 
     nav li {
       align-content: center;
     }
 
-        footer {
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
+      min-width: 40rem;
+      max-width: 50rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
+    }
+
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:hover {
+      color: transparent; /* fade text out */
+    }
+
+    footer {
       background: var(--accent);
       padding: 3rem 0;
     }
@@ -100,13 +160,14 @@
       /* vertical center within the column */
     }
 
-    @media (max-width:640px) {
+    @media (max-width: 640px) {
       nav ul {
-        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
       }
 
-      nav .push {
-        margin-left: 0;
+      .cta {
+        margin: 1rem 0 0;
       }
     }
 
@@ -232,34 +293,16 @@
       margin-top: 1.25rem;
     }
 
-    .btn {
-      position: relative;
-      display: inline-block;
-      padding: 0.6em 1.2em;
-      border-radius: 4px;
-      color: #fff;
-      background: var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-      overflow: hidden; /* keeps pseudo-element clipped to button */
-      z-index: 1;       /* ensure text stays above the image */
-      min-width: 40rem;
-      max-width: 50rem;
-      transition: color 1.5s ease-in-out; /* fade text color */
-      text-align: center;
-    }
-
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-      z-index: -1; /* sits behind the text */
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
     }
 
     .btn:hover::before {
@@ -300,7 +343,7 @@
         ">
       <nav class="wrapper">
         <ul>
-          <a href="/" style="
+          <a style="
                 color: #fff;
                 font-size: 1.3rem;
                 font-weight: 700;
@@ -314,7 +357,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="cta">
+          <li>
             <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
           </li>
         </ul>

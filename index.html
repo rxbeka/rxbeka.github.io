@@ -31,6 +31,15 @@
       --accent: #002c5a;
     }
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     body {
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       line-height: 1.6;
@@ -45,6 +54,7 @@
       color: #fff;
       z-index: 1000;
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      height: 5vh;
     }
 
     .wrapper {
@@ -58,13 +68,16 @@
       gap: 2rem;
       list-style: none;
       margin: 0;
-      padding: 1.2rem 0;
+      padding: 0.8rem 0;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      margin: auto;
+      align-content: center;
+      
     }
 
     nav li {
@@ -86,22 +99,21 @@
       text-decoration: none;
       overflow: hidden; /* keeps pseudo-element clipped to button */
       z-index: 1;       /* ensure text stays above the image */
-      min-width: 40rem;
-      max-width: 50rem;
+      min-width: 60rem;
+      max-width: 70rem;
       transition: color 1.5s ease-in-out; /* fade text color */
     }
 
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("src/Neuron_for_Website.gif") center/cover no-repeat;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-      z-index: -1; /* sits behind the text */
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
     }
 
     .btn:hover::before {
@@ -122,6 +134,7 @@
       position: relative;
       color: #fff;
       text-align: center;
+      height: 85vh;
     }
 
     .hero::after {
@@ -134,8 +147,8 @@
     .hero .inner {
       position: relative;
       z-index: 1;
-      max-width: 800px;
-      margin: auto;
+      margin-top: 10%;
+      margin-bottom: 20%;
     }
 
     h1,
@@ -151,46 +164,67 @@
       margin: auto;
       width: 85%;
     }
-
-    .triangle-layout {
+    .two-col {
+      display: grid;
+      /* margin: 0%; */
+      grid-gap: 10px;
+      text-align: center;
+    }
+    .triangle-layout{
       display: grid;
       grid-template-areas:
-        "intro intro"
+        ". intro"
         "image bio";
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr minmax(0, 70ch) 1fr;
       grid-gap: 5%;
       margin: auto;
       width: 85%;
     }
+ 
+    .one-line{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      text-align: center;
+      box-sizing: border-box;
+    }
 
     .intro {
       grid-area: intro;
+      justify-self: center;   /* centers the block inside the right column */
       text-align: center;
-      max-width: 70ch;   /* keeps text in a readable width */
-      margin: 0 auto;    /* centers it */
-      padding: 1rem 0; 
+      max-width: 70ch;
     }
 
-    .image {
-      grid-area: image;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+    .image{ 
+      grid-area: image; 
+      align-self: start;
+      justify-self: center; 
     }
 
     .bio {
       grid-area: bio;
+      justify-self: center;   /* keeps it aligned with intro above */
+      text-align: center;
+      max-width: 70ch;
+      border-radius: 8px;
 }
 
     .testimonial {
-      background: #f9f9f9;
+      background: #e9e9e9;
       width: auto;
+      border-radius: 8px;
     }
 
     .map iframe {
       width: 100%;
       height: 350px;
       border: 0;
+      margin: 0%;
     }
 
     footer {
@@ -249,7 +283,7 @@
         ">
       <nav class="wrapper">
         <ul>
-          <a href="/" style="
+          <a style="
                 color: #fff;
                 font-size: 1.3rem;
                 font-weight: 700;
@@ -263,7 +297,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="cta">
+          <li>
             <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
           </li>
         </ul>
@@ -275,10 +309,10 @@
   <section class="hero">
     <div class="inner">
       <h1 style="color: white">
-        When medication fails, <strong>TMS brings new hope.</strong>
+        When Medication Fails, <strong>TMS Brings New Hope.</strong>
       </h1>
       <h2 style="color: white">
-        <em>Your revolutionary treatment for depression, Anxiety,
+        <em>Your Revolutionary Treatment for Depression, Anxiety,
           &amp; OCD.</em>
       </h2>
       <p><a class="btn btn-primary" href="#learn-more">Learn&nbsp;More</a></p>
@@ -288,10 +322,11 @@
   <!-- INTRO -->
   <section id="learn-more">
   <div class="wrapper grid triangle-layout">
-    
-    <!-- Intro spans full width top -->
+
     <div class="intro">
-      <h2>Let Us Help You Get Your Life Back</h2>
+      <div class="one-line">
+        <h2 class="one-line">Let Us Help You Get Your Life Back</h2>
+      </div>
       <p>
         When you're struggling with treatment-resistant depression or
         post-partum depression, getting the right help can feel hopeless —
@@ -307,7 +342,7 @@
 
     <!-- Bottom left: Picture -->
     <div class="image">
-      <img src="src/Bystritsky.png" alt="Dr Bystritsky" style="width: 50%; border-radius: 8px;" />
+      <img src="src/Bystritsky.png" alt="Dr Bystritsky" style="width: 80%; border-radius: 8px;" />
     </div>
 
     <!-- Bottom right: Bio -->
@@ -332,7 +367,7 @@
   <div class="wrapper" style="background-color: var(--accent); height: 0.25rem;width: 80%;border-radius: 8px"></div>
 
   <!-- INFO -->
-  <section>
+  <section style="padding-bottom: 20px;">
     <div class="wrapper">
       <h2 style="text-align: center">Learn More About TMS</h2>
       <p style="text-align: center; max-width: 800px; margin: 0 auto">
@@ -344,6 +379,15 @@
         <a class="btn btn-primary" href="tms.html">How TMS Works</a>
       </p>
     </div>
+     <p style="font-size: 24px; text-align: center;">We're Covered by Most Insurance Providers</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+      <img src="src\insurance Providers.png" style="width: 50%; border-radius: 8px; background: white; display: block; margin: 0 0;" />
+    </div>
+    <br>
+    </p>
+      <div class="wrapper" style="background-color: var(--accent); height: 0.25rem;width: 80%;border-radius: 8px"></div>
+    </p>
+    <br>
   </section>
 
   <!-- MAP & CONTACT -->
@@ -356,16 +400,9 @@
         Our office is located in Los Angeles right off the 405. Can't make it
         into the office? No worries — we offer free phone consultations.
       </p>
-
       </p>
     </div>
-    <div style="margin-top: 10%;text-align: center;">
-      <p style="font-size: 24px;">We're Covered by Most Insurance Providers</p>
-      <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-      <img src="src\insurance Providers.png" style="width: 50%; border-radius: 8px; background: white;margin-left:-10%; display: block; margin: 0 auto;" />
-      </div>
-      
-      
+    <div>
       <p style="text-align: center">
         <br>
         Call, Email or Text
@@ -380,12 +417,14 @@
         <a href="mailto:rfodor@westsideneuro.com">rfodor@westsideneuro.com</a>
       </div>
     </div>
+    <br>
+    <div class="wrapper" style="background-color: var(--accent); height: 0.25rem;width: 80%;border-radius: 8px"></div>
   </section>
   <br>
   <br>
-  <div class="wrapper" style="background-color: var(--accent); height: 0.25rem;width: 80%;border-radius: 8px"></div>
+  
   <!-- CTA -->
-  <section style="text-align: center">
+  <section style="text-align: center; padding-top: 20px;">
 
     <div class="wrapper">
       <h2 style="color: --accent">Get Started With TMS Today!</h2>

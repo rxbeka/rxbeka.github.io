@@ -25,6 +25,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet"
     href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+  <link rel="canonical" href="https://www.westsideneuro.com" />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
   <style>
     :root { --accent: #002c5a; }
 
@@ -35,6 +38,16 @@
       margin: 0;
     }
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
     header {
       position: sticky;
       top: 0;
@@ -42,28 +55,73 @@
       color: #fff;
       z-index: 1000;
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      height: 5vh;
     }
 
     .wrapper { max-width: 1400px; margin: 0 auto; padding: 0 0vw; }
 
     nav ul {
-      display: flex; gap: 2rem; list-style: none; margin: 0; padding: 1.2rem 0;
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0.8rem 0;
     }
 
-    nav a { color: #fff; text-decoration: none; font-weight: 600; }
-    nav li { align-content: center; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: auto;
+      align-content: center;
+      
+    }
+
+    nav li {
+      align-content: center;
+    }
     .cta { margin-left: auto; }
 
     section { padding: 6rem 0; }
 
     .map iframe { width: 100%; height: 350px; border: 0; }
-
+    
     .btn {
-      display: inline-block; padding: 0.6em 1.2em; border-radius: 4px;
-      color: #fff; background: var(--accent); font-weight: 700; text-decoration: none;
-      transition: 0.2s; max-width: 50rem; min-width: 40rem;
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
+      min-width: 10rem;
+      max-width: 20rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
     }
-    .btn:hover { background: #064281; color: #fff; }
+
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:hover {
+      color: transparent; /* fade text out */
+    }
 
     h1, h2, h3, h4 { margin: 0 0 1rem; }
 
@@ -98,12 +156,21 @@
 
 <body>
   <header>
-    <div class="wrapper"
-      style="display: flex; align-items: center; flex-wrap: wrap; flex-direction: column; justify-content: center;">
+    <div class="wrapper" style="
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+        ">
       <nav class="wrapper">
         <ul>
-          <a href="/"
-            style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
+          <a style="
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-decoration: none;
+              ">Westside&nbsp;NeuroTherapeutics</a>
           <li><a href="index.html">Home</a></li>
           <li><a href="ourapproach.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -112,13 +179,15 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
+          <li>
+            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="contact">
+  <section class="contact" style="padding-bottom: 3vh;">
     <div class="wrapper contact-grid">
       <div class="contact-left">
         <h1>Contact Us!</h1>
@@ -151,7 +220,7 @@
           <li>Sunday: Closed</li>
         </ul>
 
-        <a class="btn" href="https://calendly.com/rebekawestsideneuro/30min" style="color: #fff;">Book a Consultation</a>
+        <a class="btn" href="https://calendly.com/rebekawestsideneuro/30min" style="color: #fff; text-decoration: none;">Book a Consultation</a>
       </div>
     </div>
   </section>
@@ -163,9 +232,7 @@
         src="https://www.google.com/maps?q=10780+Santa+Monica+Boulevard+%23470,+Los+Angeles,+CA+90025&output=embed"
         allowfullscreen></iframe>
     </div>
-    <p style="text-align: center; margin-top: 0.75rem;">
-      10780 Santa Monica Boulevard, Suite 470, Los Angeles, California 90025
-    </p>
+    <br>
   </section>
 
   <!-- FOOTER -->

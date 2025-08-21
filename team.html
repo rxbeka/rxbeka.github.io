@@ -12,6 +12,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap"
     rel="stylesheet" />
+  <link rel="canonical" href="https://www.westsideneuro.com" />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
+  <link rel="stylesheet"
+    href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
 
   <style>
     :root {
@@ -23,6 +28,16 @@
       color: #222;
       margin: 0;
     }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     header {
       position: sticky;
       top: 0;
@@ -30,19 +45,25 @@
       color: #fff;
       z-index: 1000;
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      height: 5vh;
     }
     nav ul {
       display: flex;
       gap: 2rem;
       list-style: none;
       margin: 0;
-      padding: 1.2rem 0;
+      padding: 0.8rem 0;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      margin: auto;
+      align-content: center;
+      
     }
+
     nav li {
       align-content: center;
     }
@@ -73,6 +94,7 @@
       flex-direction: column;
       justify-content: center;
     }
+
     .btn {
       position: relative;
       display: inline-block;
@@ -90,17 +112,16 @@
       text-align: center;
     }
 
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-      z-index: -1; /* sits behind the text */
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
     }
 
     .btn:hover::before {
@@ -131,11 +152,22 @@
 
 <body>
   <!-- HEADER -->
-  <header>
-    <div class="wrapper" style="display:flex; align-items:center; flex-wrap:wrap; flex-direction:column; justify-content:center;">
+    <header>
+    <div class="wrapper" style="
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+        ">
       <nav class="wrapper">
         <ul>
-          <a href="/" style="color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none;">Westside&nbsp;NeuroTherapeutics</a>
+          <a style="
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-decoration: none;
+              ">Westside&nbsp;NeuroTherapeutics</a>
           <li><a href="index.html">Home</a></li>
           <li><a href="ourapproach.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -144,7 +176,9 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
+          <li>
+            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
+          </li>
         </ul>
       </nav>
     </div>

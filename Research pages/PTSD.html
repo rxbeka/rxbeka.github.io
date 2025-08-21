@@ -24,6 +24,11 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+  <link rel="canonical" href="https://www.westsideneuro.com" />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
   <!-- Your shared stylesheet (if used) -->
   <!-- <link rel="stylesheet" href="site.css" /> -->
 
@@ -32,19 +37,75 @@
     :root { --accent:#002c5a; --ink:#0b2545; }
     body { margin:0; font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; color:#222; line-height:1.6; }
     a { color:var(--accent); text-decoration:none; }
-    header { position:sticky; top:0; background:var(--accent); color:#fff; z-index:1000; padding:0.5rem 0; }
+    header { position:sticky; top:0; background:var(--accent); color:#fff; z-index:1000; padding:0.5rem 0; height: 5vh;}
     .wrapper { max-width:1400px; margin:0 auto; padding:0 5vw; }
-    nav ul { display:flex; flex-wrap:wrap; gap:2rem; list-style:none; margin:0; padding:0.8rem 0; align-items:center; }
-    nav a { color:#fff; font-weight:600; }
-    nav .brand { font-size:1.3rem; font-weight:700; }
-    nav .spacer { margin-left:auto; }
 
-    .btn {
-      position:relative; display:inline-block; padding:0.7em 1.4em; background:var(--accent); color:#fff;
-      font-weight:800; border-radius:6px; overflow:hidden; min-width:12rem; text-align:center;
-      transition:color 0.8s ease, box-shadow 0.3s ease;
+    ::-webkit-scrollbar {
+      display: none;
     }
-    .btn:hover { box-shadow:0 8px 18px rgba(0,0,0,0.12); }
+
+    .body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0.8rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: auto;
+      align-content: center;
+      
+    }
+
+    nav li {
+      align-content: center;
+    }
+    
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
+      min-width: 10rem;
+      max-width: 20rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
+    }
+
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:hover {
+      color: transparent; /* fade text out */
+    }
 
     section { padding:6rem 0; }
     
@@ -89,19 +150,32 @@
 <body>
   <!-- HEADER -->
   <header>
-    <div class="wrapper">
-      <nav>
+    <div class="wrapper" style="
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+        ">
+      <nav class="wrapper">
         <ul>
-          <li><a href="/" class="brand">Westside NeuroTherapeutics</a></li>
+          <a style="
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-decoration: none;
+              ">Westside&nbsp;NeuroTherapeutics</a>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../ourapproach.html">About</a></li>
           <li><a href="../services.html">Services</a></li>
           <li><a href="../tms.html">TMS</a></li>
           <li><a href="../research.html">Research</a></li>
           <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../team.html">The Team</a></li>
           <li><a href="../contact.html">Contact</a></li>
-          <li class="spacer"></li>
-          <li><a href="https://calendly.com/rebekawestsideneuro/30min" class="btn">Free Consult</a></li>
+          <li>
+            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
+          </li>
         </ul>
       </nav>
     </div>

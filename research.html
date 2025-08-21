@@ -18,7 +18,8 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+  <link rel="stylesheet"
+    href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
 
     <style>
       :root { --accent:#002c5a; }
@@ -36,6 +37,16 @@
       footer p { color:#fff; font-size:1.5rem; }
       footer .columns { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:3rem; text-align:left; }
       footer .columns>div { display:flex; flex-direction:column; justify-content:center; }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
 
       /* Research page */
       main { padding:4rem 0 5rem; }
@@ -77,31 +88,33 @@
         margin-bottom:.5rem;
       }
       .excerpt { margin:.25rem 0 1rem; color:#2a2a2a; }
-      .btn {
-      position: relative;
-      display: inline-block;
-      padding: 0.6em 1.2em;
-      border-radius: 4px;
-      color: #fff;
-      background: var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-      overflow: hidden; /* keeps pseudo-element clipped to button */
-      z-index: 1;       /* ensure text stays above the image */
-      transition: color 1.5s ease-in-out; /* fade text color */
-    }
 
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("src/Neuron_for_Website.jpeg") center/cover no-repeat;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-      z-index: -1; /* sits behind the text */
+      .btn {
+        position: relative;
+        display: inline-block;
+        padding: 0.6em 1.2em;
+        border-radius: 4px;
+        color: #fff;
+        background: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+        overflow: hidden; /* keeps pseudo-element clipped to button */
+        z-index: 1;       /* ensure text stays above the image */
+        min-width: 10rem;
+        max-width: 20rem;
+        transition: color 1.5s ease-in-out; /* fade text color */
+        text-align: center;
+      }
+     .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
+      opacity:0;
+      transition:opacity 1.5s ease-in-out;
+      z-index:-1;
+      background-position: 100% 40%;
+      background-size: 120%;
     }
 
     .btn:hover::before {
@@ -126,23 +139,37 @@
 
   <body>
     <!-- Header -->
-    <header>
-      <div class="wrapper" style="display:flex;align-items:center;flex-wrap:wrap;flex-direction:column;justify-content:center;">
-        <nav class="wrapper">
-          <ul>
-            <a href="/" style="color:#fff;font-size:1.3rem;font-weight:700;text-decoration:none;">Westside&nbsp;NeuroTherapeutics</a>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ourapproach.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="tms.html">TMS</a></li>
+     <header>
+    <div class="wrapper" style="
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+        ">
+      <nav class="wrapper">
+        <ul>
+          <a style="
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-decoration: none;
+              ">Westside&nbsp;NeuroTherapeutics</a>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ourapproach.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tms.html">TMS</a></li>
           <li><a href="research.html">Research</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="cta"><a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     <!-- Main -->
     <main>
@@ -165,7 +192,7 @@
             <div class="tags">
               <span class="tag">TMS</span><span class="tag">TRD</span><span class="tag">MDD</span>
             </div>
-            <a class="btn" href="Research pages/ResistantDepression.html">Read more</a>
+            <p><a class="btn" href="Research pages/ResistantDepression.html">Read more</a></p>
           </article>
 
           <!-- Card 2 -->
