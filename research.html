@@ -26,17 +26,78 @@
 
       /* Base (from site) */
       body { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
-      header { position:sticky; top:0; background:var(--accent); color:#fff; z-index:1000; box-shadow:0 3px 7px rgba(0,0,0,.15); }
-      .wrapper { max-width:1400px; margin:0 auto; padding:0 0vw; }
-      nav ul { display:flex; gap:2rem; list-style:none; margin:0; padding:1.2rem 0; }
-      nav a { color:#fff; text-decoration:none; font-weight:600; }
-      nav li { align-content:center; }
-      .cta { margin-left:auto; }
-      footer { background:var(--accent); padding:3rem 0; }
-      footer a { color:#fff; text-decoration:none; font-size:1.3rem; }
-      footer p { color:#fff; font-size:1.5rem; }
-      footer .columns { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:3rem; text-align:left; }
-      footer .columns>div { display:flex; flex-direction:column; justify-content:center; }
+      header {
+      position: sticky;
+      top: 0;
+      background: var(--accent);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      height: 5%;
+    }
+
+    .wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 0vw;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0.2rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: auto;
+      align-content: center;
+      
+    }
+
+    nav li {
+      align-content: center;
+      
+    }
+
+    .cta {
+      margin-left: auto;
+    }
+      footer {
+      background: var(--accent);
+      padding: 3rem 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+    }
+
+    footer p {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    footer .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 3rem;
+      text-align: left;
+    }
+
+    footer .columns>div {
+      display: flex;
+      /* make each column a flex container */
+      flex-direction: column;
+      /* stack links/text */
+      justify-content: center;
+      /* vertical center within the column */
+    }
 
     ::-webkit-scrollbar {
       display: none;
@@ -139,7 +200,7 @@
 
   <body>
     <!-- Header -->
-     <header>
+    <header>
     <div class="wrapper" style="
           display: flex;
           align-items: center;
@@ -154,7 +215,7 @@
                 font-size: 1.3rem;
                 font-weight: 700;
                 text-decoration: none;
-              " href="index.html">Westside&nbsp;NeuroTherapeutics</a>
+              ">Westside&nbsp;NeuroTherapeutics</a>
           <li><a href="index.html">Home</a></li>
           <li><a href="ourapproach.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -163,7 +224,7 @@
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a>
+            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
           </li>
         </ul>
       </nav>
