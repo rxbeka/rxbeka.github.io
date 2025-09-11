@@ -15,18 +15,25 @@
     <meta property="og:description" content="Plain-language summaries of peer-reviewed TMS research curated by Westside NeuroTherapeutics." />
     <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=750w" />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet"
     href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
+  <link rel="canonical" href="https://www.westsideneuro.com" />
+  <link rel="icon"
+    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
 
     <style>
       :root { --accent:#002c5a; }
 
-      /* Base (from site) */
-      body { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
-      header {
+    body {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      line-height: 1.6;
+      color: #222;
+      margin: 0;
+    }
+
+    header {
       position: sticky;
       top: 0;
       background: var(--accent);
@@ -67,7 +74,8 @@
     .cta {
       margin-left: auto;
     }
-      footer {
+
+    footer {
       background: var(--accent);
       padding: 3rem 0;
     }
@@ -120,6 +128,7 @@
         font-size:3rem;
         line-height:1.1;
         color:#0b2545;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       }
       .hero p { margin:0 auto; max-width:840px; font-size:1.15rem; color:#444; }
 
@@ -151,22 +160,23 @@
       .excerpt { margin:.25rem 0 1rem; color:#2a2a2a; }
 
       .btn {
-        position: relative;
-        display: inline-block;
-        padding: 0.6em 1.2em;
-        border-radius: 4px;
-        color: #fff;
-        background: var(--accent);
-        font-weight: 700;
-        text-decoration: none;
-        overflow: hidden; /* keeps pseudo-element clipped to button */
-        z-index: 1;       /* ensure text stays above the image */
-        min-width: 10rem;
-        max-width: 20rem;
-        transition: color 1.5s ease-in-out; /* fade text color */
-        text-align: center;
-      }
-     .btn::before{
+      position: relative;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      overflow: hidden; /* keeps pseudo-element clipped to button */
+      z-index: 1;       /* ensure text stays above the image */
+      min-width: 10rem;
+      max-width: 20rem;
+      transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
+    }
+
+    .btn::before{
       content:"";
       position:absolute;
       inset:0;
@@ -199,8 +209,8 @@
   </head>
 
   <body>
-    <!-- Header -->
-    <header>
+  <!-- Header -->
+  <header>
     <div class="wrapper" style="
           display: flex;
           align-items: center;
@@ -224,7 +234,7 @@
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
+            <a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a>
           </li>
         </ul>
       </nav>
@@ -304,26 +314,27 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="wrapper columns">
-        <div>
-          <img src="src/Full_Logo_Transparent_Background2.png" style="width:100%;border-radius:8px;background:var(--accent)" alt="Westside NeuroTherapeutics logo" />
-        </div>
-        <div>
-          <p><strong>Stay in touch - it's good for your head!</strong></p>
-          <p><em>Questions?&nbsp;</em> <a href="contact.html">Contact Us</a></p>
-        </div>
-        <div>
-          <a href="ourapproach.html">About</a><br />
-          <a href="services.html">Services</a><br />
-          <a href="team.html">Team</a>
-        </div>
-        <div>
-          
-          <a href="contact.html">Get Started</a><br />
-          <a href="/privacy-policy">Privacy Policy</a>
-        </div>
+  <footer>
+    <div class="wrapper columns">
+      <div>
+        <img src="src\Full_Logo_Transparent_Background2.png"
+          style="width: 100%; border-radius: 8px; background: var(--accent)" />
       </div>
-    </footer>
+      <div>
+        <p><strong>Stay in touch - it's good for your head!</strong></p>
+        <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
+      </div>
+      <div>
+        <a href="about.html">About</a><br />
+        <a href="services.html">Services</a><br />
+        <a href="team.html">Team</a>
+      </div>
+      <div>
+        <a href="ourapproach.html">Our Approach</a><br />
+        
+        <a href="https://calendly.com/rebekawestsideneuro/30min">Get Started</a><br />
+      </div>
+    </div>
+  </footer>
   </body>
 </html>

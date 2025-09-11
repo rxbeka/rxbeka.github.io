@@ -100,9 +100,10 @@
       text-decoration: none;
       overflow: hidden; /* keeps pseudo-element clipped to button */
       z-index: 1;       /* ensure text stays above the image */
-      min-width: 60rem;
-      max-width: 70rem;
+      min-width: 10rem;
+      max-width: 20rem;
       transition: color 1.5s ease-in-out; /* fade text color */
+      text-align: center;
     }
 
     .btn::before{
@@ -167,19 +168,16 @@
     }
     .two-col {
       display: grid;
-      /* margin: 0%; */
       grid-gap: 10px;
       text-align: center;
+      justify-content: center;
+      align-items: center; 
     }
     .triangle-layout{
-      display: grid;
-      grid-template-areas:
-        ". intro"
-        "image bio";
-      grid-template-columns: 1fr minmax(0, 70ch) 1fr;
-      grid-gap: 5%;
-      margin: auto;
-      width: 85%;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center; 
     }
  
     .one-line{
@@ -298,7 +296,7 @@
           <li><a href="team.html">The Team</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="https://calendly.com/jmay-l9i4/30min">Free&nbsp;Consult</a>
+            <a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a>
           </li>
         </ul>
       </nav>
@@ -321,8 +319,6 @@
 
   <!-- INTRO -->
   <section id="learn-more">
-  <div class="wrapper grid triangle-layout">
-
     <div class="intro">
       <div class="one-line">
         <h2 class="one-line">Let Us Help You Get Your Life Back</h2>
@@ -339,26 +335,25 @@
         you. It's FDA-approved, non-invasive and medication-free.
       </p>
     </div>
+    <div class="triangle-layout">
 
-    <!-- Bottom left: Picture -->
-    <div class="image">
-      <img src="src/Bystritsky.png" alt="Dr Bystritsky" style="width: 80%; border-radius: 8px;" />
-    </div>
+      <div class="image">
+        <img src="src/Bystritsky.png" alt="Dr Bystritsky" style="width: 60%; border-radius: 8px;" />
+      </div>
 
-    <!-- Bottom right: Bio -->
-    <div class="bio">
-      <section class="wrapper testimonial">
-        <blockquote>
-          <strong>Bystritsky, M.D., Ph.D., Medical Director</strong>
-          <br>
-          Professor Emeritus for Psychiatry at UCLA, founder and former director of the Anxiety Disorders Program and Targeted Brain Stimulation Program for over 20 years
-          <br><br>
-          <strong>Pioneering TMS Expert:</strong> Key figure in introducing dTMS technology to the U.S. with over 35 years of experience in neuroscience and psychiatry
-          <br><br>
-          <strong>Recognized Excellence:</strong> Listed in Best Doctors in America for 20 years, showcasing recognition and many research awards
-        </blockquote>
-      </section>
-    </div>
+      <div class="bio">
+        <section class="wrapper testimonial">
+          <blockquote>
+            <strong>Bystritsky, M.D., Ph.D., Medical Director</strong>
+            <br>
+            Professor Emeritus for Psychiatry at UCLA, founder and former director of the Anxiety Disorders Program and Targeted Brain Stimulation Program for over 20 years
+            <br><br>
+            <strong>Pioneering TMS Expert:</strong> Key figure in introducing dTMS technology to the U.S. with over 35 years of experience in neuroscience and psychiatry
+            <br><br>
+            <strong>Recognized Excellence:</strong> Listed in Best Doctors in America for 20 years, showcasing recognition and many research awards
+          </blockquote>
+        </section>
+      </div>
 
   </div>
 </section>
@@ -409,12 +404,12 @@
         <br>
       <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
         <img src="src\Phone_Logo.png" style="width: 2%;" />
-        <a href="tel:3239680312">323-968-0312</a>
+        <a href="tel:3239680312" style="text-decoration: underline;">323-968-0312</a>
       </div>
       <br>
       <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
         <img src="src\Email_Logo.png" style="width: 2%;" />
-        <a href="mailto:rfodor@westsideneuro.com">rfodor@westsideneuro.com</a>
+        <a href="mailto:rfodor@westsideneuro.com" style="text-decoration: underline;">rfodor@westsideneuro.com</a>
       </div>
     </div>
     <br>
@@ -429,7 +424,7 @@
     <div class="wrapper">
       <h2 style="color: --accent">Get Started With TMS Today!</h2>
       <p>
-        <a class="btn" href="https://calendly.com/jmay-l9i4/30min?month=2024-04">Book a Consultation</a>
+        <a class="btn" href="https://calendly.com/rebekawestsideneuro/30min">Book a Consultation</a>
       </p>
     </div>
   </section>
@@ -453,7 +448,7 @@
       <div>
         <a href="ourapproach.html">Our Approach</a><br />
         
-        <a href="contact.html">Get Started</a><br />
+        <a href="https://calendly.com/rebekawestsideneuro/30min">Get Started</a><br />
       </div>
     </div>
   </footer>
