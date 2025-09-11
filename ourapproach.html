@@ -1,324 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Our Approach | Westside NeuroTherapeutics</title>
+    <meta
+      name="description"
+      content="Our simple, personal, results-driven approach to TMS: listen & evaluate, tailor your plan, then track, adjust and support."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css"
+    />
+    <link rel="canonical" href="https://www.westsideneuro.com" />
+    <link
+      rel="icon"
+      href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w"
+    />
+    <style>
+      :root {
+        --accent: #002c5a;
+      }
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Our Approach | Westside NeuroTherapeutics</title>
-  <meta name="description"
-    content="Our simple, personal, results-driven approach to TMS: listen & evaluate, tailor your plan, then track, adjust and support." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet"
-  href="https://static1.squarespace.com/static/versioned-site-css/6606fb063699370bf2e12849/17/5c5a519771c10ba3470d8101/6606fb063699370bf2e12855/1656/site.css" />
-  <link rel="canonical" href="https://www.westsideneuro.com" />
-  <link rel="icon"
-    href="https://images.squarespace-cdn.com/content/v1/6606fb063699370bf2e12849/4bea3670-97e1-4e95-bd46-ef774955da58/favicon.ico?format=100w" />
-  <style>
-        :root {
-      --accent: #002c5a;
-    }
+      ::-webkit-scrollbar {
+        display: none;
+      }
 
-    ::-webkit-scrollbar {
-      display: none;
-    }
+      .body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
 
-    .body {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
+      body {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        line-height: 1.6;
+        color: #222;
+        margin: 0;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        background: var(--accent);
+        color: #fff;
+        z-index: 1000;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+        height: 5%;
+      }
 
-    body {
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-      line-height: 1.6;
-      color: #222;
-      margin: 0;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      background: var(--accent);
-      color: #fff;
-      z-index: 1000;
-      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
-      height: 5%;
-    }
+      .wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 0vw;
+      }
 
-    .wrapper {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 0vw;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      margin: 0;
-      padding: 0.2rem 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      margin: auto;
-      align-content: center;
-      
-    }
-
-    nav li {
-      align-content: center;
-      
-    }
-    .cta {
-      margin-left: auto;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    section {
-      padding: 64px 0;
-    }
-
-    .alt {
-      background: var(--alt);
-    }
-
-    h1 {
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    }
-    h2,
-    h3 {
-      margin: 0 0 12px;
-      line-height: 1.12;
-    }
-
-    h1 {
-      font-size: clamp(40px, 6vw, 80px);
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: clamp(28px, 3.2vw, 44px);
-      font-weight: 700;
-    }
-
-    h3 {
-      font-size: clamp(18px, 2vw, 24px);
-      font-weight: 700;
-    }
-
-
-    /* hero */
-    .hero {
-      background: url("https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=1500w") center/cover fixed;
-      position: relative;
-      color: #fff;
-      text-align: center;
-      height: 85vh;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    .hero .inner {
-      position: relative;
-      margin-top: 10%;
-      margin-bottom: 20%;
-      z-index: 1;
-      /* margin: auto; */
-    }
-
-    /* footer */
-    footer {
-      background: var(--accent);
-      padding: 3rem 0;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.3rem;
-    }
-
-    footer p {
-      color: #fff;
-      font-size: 1.5rem;
-    }
-
-    footer .columns {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 3rem;
-      text-align: left;
-    }
-
-    footer .columns>div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    /* media */
-    img.responsive {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-    }
-
-    /* responsive */
-    @media (max-width: 640px) {
       nav ul {
-        flex-direction: column;
-        gap: 1rem;
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0.2rem 0;
       }
 
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        margin: auto;
+        align-content: center;
+      }
+
+      nav li {
+        align-content: center;
+      }
       .cta {
-        margin: 1rem 0 0;
+        margin-left: auto;
       }
-    }
-    .btn {
-      position: relative;
-      display: inline-block;
-      padding: 0.6em 1.2em;
-      border-radius: 4px;
-      color: #fff;
-      background: var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-      overflow: hidden; /* keeps pseudo-element clipped to button */
-      z-index: 1;       /* ensure text stays above the image */
-      min-width: 10rem;
-      max-width: 20rem;
-      transition: color 1.5s ease-in-out; /* fade text color */
-      text-align: center;
-    }
 
-    .btn::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:url("src/Neuron_for_Website.gif") center/cover no-repeat;
-      opacity:0;
-      transition:opacity 1.5s ease-in-out;
-      z-index:-1;
-      background-position: 100% 40%;
-      background-size: 120%;
-    }
+      .center {
+        text-align: center;
+      }
 
-    .btn:hover::before {
-      opacity: 1;
-    }
+      section {
+        padding: 64px 0;
+      }
 
-    .btn:hover {
-      color: transparent; /* fade text out */
-    }
-  </style>
-</head>
+      .alt {
+        background: var(--alt);
+      }
 
-<body>
-  <header>
-    <div class="wrapper" style="
+      h1 {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      }
+      h2 {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      }
+      h3 {
+        margin: 0 0 12px;
+        line-height: 1.12;
+      }
+
+      h1 {
+        font-size: clamp(40px, 6vw, 80px);
+        font-weight: 700;
+      }
+
+      h2 {
+        font-size: clamp(28px, 3.2vw, 44px);
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: clamp(18px, 2vw, 24px);
+        font-weight: 700;
+      }
+
+      /* hero */
+      .hero {
+        background: url("https://images.squarespace-cdn.com/content/v1/624b503b5d73881124e70a24/1649102923989-HOTX3VP5FFBFQY94VTYO/Stocksy_comp_2793634.jpg?format=1500w")
+          center/cover fixed;
+        position: relative;
+        color: #fff;
+        text-align: center;
+        height: 85vh;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      .hero .inner {
+        position: relative;
+        margin-top: 10%;
+        margin-bottom: 20%;
+        z-index: 1;
+        /* margin: auto; */
+      }
+      .title-approach {
+        margin:0 0 .5rem;
+        font-size:4rem;
+        font-weight: 100;
+        line-height:1.1;
+        color:#0b2545;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        margin-bottom: 2.5rem;
+        text-align: center;
+      }
+      .approach-text {
+        margin-bottom: 2rem;
+        font-size:1.4rem;
+        font-weight: 100;
+        color:#444;
+      }
+      /* footer */
+      footer {
+        background: var(--accent);
+        padding: 3rem 0;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.3rem;
+      }
+
+      footer p {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      footer .columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 3rem;
+        text-align: left;
+      }
+
+      footer .columns > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      /* media */
+      img.responsive {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        display: block;
+      }
+
+      /* responsive */
+      @media (max-width: 640px) {
+        nav ul {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .cta {
+          margin: 1rem 0 0;
+        }
+      }
+      .btn {
+        position: relative;
+        display: inline-block;
+        padding: 0.6em 1.2em;
+        border-radius: 4px;
+        color: #fff;
+        background: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+        overflow: hidden; /* keeps pseudo-element clipped to button */
+        z-index: 1; /* ensure text stays above the image */
+        min-width: 10rem;
+        max-width: 20rem;
+        transition: color 1.5s ease-in-out; /* fade text color */
+        text-align: center;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("src/Neuron_for_Website.gif") center/cover no-repeat;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        z-index: -1;
+        background-position: 100% 40%;
+        background-size: 120%;
+      }
+
+      .btn:hover::before {
+        opacity: 1;
+      }
+
+      .btn:hover {
+        color: transparent; /* fade text out */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div
+        class="wrapper"
+        style="
           display: flex;
           align-items: center;
           flex-wrap: wrap;
           flex-direction: column;
           justify-content: center;
-        ">
-      <nav class="wrapper">
-        <ul>
-          <a style="
+        "
+      >
+        <nav class="wrapper">
+          <ul>
+            <a
+              style="
                 color: #fff;
                 font-size: 1.3rem;
                 font-weight: 700;
                 text-decoration: none;
-              ">Westside&nbsp;NeuroTherapeutics</a>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ourapproach.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="tms.html">TMS</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="team.html">The Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="https://calendly.com/rebekawestsideneuro/30min">Free&nbsp;Consult</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrapper inner">
-      <h1 style="text-align: center; color: white;">We Don't Just Treat Symptoms — <br>We Treat The Source. </h1>
-    </div>
-  </section>
+              "
+              >Westside&nbsp;NeuroTherapeutics</a
+            >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ourapproach.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tms.html">TMS</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="team.html">The Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="https://calendly.com/rebekawestsideneuro/30min"
+                >Free&nbsp;Consult</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrapper inner">
+        <h1 style="text-align: center; color: white">
+          We Don't Just Treat Symptoms — <br />We Treat The Source.
+        </h1>
+      </div>
+    </section>
 
-  <!-- OUR APPROACH -->
-  <section style="display: flex; align-items: center; justify-content: center;">
-    <div style="text-align: center; max-width: 60%; align-self: center">
-      <h2>Our Approach</h2>
-      <h3>
-        At Westside NeuroTherapeutics, we don't just treat symptoms, we treat individuals. Our approach to
-        Transcranial Magnetic Stimulation therapy goes beyond the conventional. We understand that each brain is
-        as unique as the person it belongs to, which is why we personalize every aspect of your treatment.
-        </h3>
-      <div style="text-align: center; font-size: 18px;">
-        <strong>Personalized Care:</strong><br>Your journey starts with a consultation designed to understand your needs and your story. From there, our team of psychiatrists create a treatment plan tailored specifically to you.
-        <br>
-        <br>
-        <strong>Targeted Treatment:</strong>
-        <br>
-        Our FDA-approved TMS technology delivers magnetic pulses directly to the areas of your brain that need rejuvenation. This precision ensures we can offer you the best possible outcomes.
-        <br>
-        <br>
-        <strong>Committed to Comfort:</strong>
-        <br>
-We believe recovery should feel safe, comfortable, and stress-free. That’s why our sessions are calm, non-invasive, and medication-free. Our treatment plan is designed to be a peaceful time for healing and with no downtime, you can continue with your day right after! From navigating insurance, keeping updated with the latest research, along with walking you through every detail – our team is here to support you through each step.
-        <br>
-        <br>
-        <strong>Your Partner in Healing:</strong>
-        <br>
-        When you choose Westside NeuroTherapeutics, you’re not just starting a treatment — you’re gaining a partner committed to helping you reclaim your life and rediscover what well-being feels like.
-        <br>
-        <br>
-        <p>
-        <a class="btn" href="https://calendly.com/rebekawestsideneuro/30min?month=2024-04">Book Your Free Consultation</a>
+    <!-- OUR APPROACH -->
+    <section
+      style="display: flex; align-items: center; justify-content: center"
+    >
+      <div style="text-align: center; max-width: 60%; align-self: center">
+        <h1 class="title-approach">Our Approach</h2>
+        <p class="approach-text">
+          At Westside NeuroTherapeutics, we don't just treat symptoms, we treat
+          individuals. Our approach to Transcranial Magnetic Stimulation therapy
+          goes beyond the conventional. We understand that each brain is as
+          unique as the person it belongs to, which is why we personalize every
+          aspect of your treatment.
         </p>
+        <div style="text-align: center; font-size: 18px;">
+          <strong>Personalized Care:</strong><br />Your journey starts with a
+          consultation designed to understand your needs and your story. From
+          there, our team of psychiatrists create a treatment plan tailored
+          specifically to you.
+          <br />
+          <br />
+          <strong>Targeted Treatment:</strong>
+          <br />
+          Our FDA-approved TMS technology delivers magnetic pulses directly to
+          the areas of your brain that need rejuvenation. This precision ensures
+          we can offer you the best possible outcomes.
+          <br />
+          <br />
+          <strong>Committed to Comfort:</strong>
+          <br />
+          We believe recovery should feel safe, comfortable, and stress-free.
+          That’s why our sessions are calm, non-invasive, and medication-free.
+          Our treatment plan is designed to be a peaceful time for healing and
+          with no downtime, you can continue with your day right after! From
+          navigating insurance, keeping updated with the latest research, along
+          with walking you through every detail – our team is here to support
+          you through each step.
+          <br />
+          <br />
+          <strong>Your Partner in Healing:</strong>
+          <br />
+          When you choose Westside NeuroTherapeutics, you’re not just starting a
+          treatment — you’re gaining a partner committed to helping you reclaim
+          your life and rediscover what well-being feels like.
+          <br />
+          <br />
+          <p>
+            <a
+              class="btn"
+              href="https://calendly.com/rebekawestsideneuro/30min?month=2024-04"
+              >Book Your Free Consultation</a
+            >
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
     <!-- FOOTER -->
-  <footer>
-    <div class="wrapper columns">
-      <div>
-        <img src="src\Full_Logo_Transparent_Background2.png"
-          style="width: 100%; border-radius: 8px; background: var(--accent)" />
-      </div>
-      <div>
-        <p><strong>Stay in touch - it's good for your head!</strong></p>
-        <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
-      </div>
-      <div>
-        <a href="about.html">About</a><br />
-        <a href="services.html">Services</a><br />
-        <a href="team.html">Team</a>
-      </div>
-      <div>
-        <a href="ourapproach.html">Our Approach</a><br />
-        
-        <a href="https://calendly.com/rebekawestsideneuro/30min">Get Started</a><br />
-      </div>
-    </div>
-  </footer>
-</body>
+    <footer>
+      <div class="wrapper columns">
+        <div>
+          <img
+            src="src\Full_Logo_Transparent_Background2.png"
+            style="width: 100%; border-radius: 8px; background: var(--accent)"
+          />
+        </div>
+        <div>
+          <p><strong>Stay in touch - it's good for your head!</strong></p>
+          <p><em>Questions?&nbsp</em> <a href="contact.html">Contact Us</a></p>
+        </div>
+        <div>
+          <a href="about.html">About</a><br />
+          <a href="services.html">Services</a><br />
+          <a href="team.html">Team</a>
+        </div>
+        <div>
+          <a href="ourapproach.html">Our Approach</a><br />
 
+          <a href="https://calendly.com/rebekawestsideneuro/30min"
+            >Get Started</a
+          ><br />
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
